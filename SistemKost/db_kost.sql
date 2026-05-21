@@ -1,9 +1,3 @@
--- =====================================================
--- Database: db_kost
--- Sistem Manajemen dan Pemesanan Kamar Kost
--- Tabel: users, kamar, pemesanan
--- =====================================================
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -13,17 +7,9 @@ CREATE DATABASE IF NOT EXISTS `db_kost`
   CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
 USE `db_kost`;
-
--- --------------------------------------------------------
--- Drop urutan: child dulu, baru parent
--- --------------------------------------------------------
 DROP TABLE IF EXISTS `pemesanan`;
 DROP TABLE IF EXISTS `kamar`;
 DROP TABLE IF EXISTS `users`;
-
--- --------------------------------------------------------
--- Tabel: users
--- --------------------------------------------------------
 CREATE TABLE `users` (
   `idUser`       INT(11)       NOT NULL AUTO_INCREMENT,
   `username`     VARCHAR(50)   NOT NULL UNIQUE,
@@ -39,12 +25,9 @@ CREATE TABLE `users` (
 -- Akun default: admin / admin123  |  user / user123
 INSERT INTO `users` (`username`, `password`, `namaLengkap`, `noTelp`, `role`) VALUES
 ('admin',  'admin123',  'Administrator',  '081200000000', 'admin'),
-('budi',   'budi123',   'Budi Santoso',   '081234567890', 'user'),
-('siti',   'siti123',   'Siti Aminah',    '089876543210', 'user');
+('rasyid',   'rasyid123',   'Muhammad Rasyid',   '081345162892', 'user'),
+('zidan',   'zidan123',   'Raffi Zidane',    '089876543210', 'user');
 
--- --------------------------------------------------------
--- Tabel: kamar
--- --------------------------------------------------------
 CREATE TABLE `kamar` (
   `idKamar`     INT(11)       NOT NULL AUTO_INCREMENT,
   `nomorKamar`  VARCHAR(10)   NOT NULL UNIQUE,
@@ -66,9 +49,6 @@ INSERT INTO `kamar` (`nomorKamar`, `tipeKamar`, `hargaKamar`, `statusKamar`, `de
 ('K05', 'Eksekutif', 800000,  'Maintenance', 'Sedang renovasi'),
 ('K06', 'VIP',       1200000, 'Tersedia',    'Kamar mewah, full furnish');
 
--- --------------------------------------------------------
--- Tabel: pemesanan
--- --------------------------------------------------------
 CREATE TABLE `pemesanan` (
   `idPesan`        INT(11)   NOT NULL AUTO_INCREMENT,
   `idUser`         INT(11)   NOT NULL,
@@ -90,9 +70,9 @@ CREATE TABLE `pemesanan` (
     ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Data contoh: budi sewa K02, siti sewa K04
+-- Data contoh
 INSERT INTO `pemesanan` (`idUser`, `idKamar`, `durasi`, `totalHarga`, `tanggalMulai`, `tanggalSelesai`, `statusPesan`) VALUES
-(2, 2, 3, 2400000, '2025-01-01', '2025-04-01', 'Aktif'),
-(3, 4, 2, 1000000, '2025-03-15', '2025-05-15', 'Aktif');
+(2, 2, 3, 2400000, '2026-01-01', '2026-04-01', 'Aktif'),
+(3, 4, 2, 1000000, '2026-03-15', '2026-05-15', 'Aktif');
 
 COMMIT;

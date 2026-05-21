@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormDashboardUser
     Inherits System.Windows.Forms.Form
 
@@ -126,7 +126,7 @@ Partial Class FormDashboardUser
         ' lblWelcome
         ' 
         lblWelcome.AutoSize = True
-        lblWelcome.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        lblWelcome.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         lblWelcome.ForeColor = Color.White
         lblWelcome.Location = New Point(17, 13)
         lblWelcome.Name = "lblWelcome"
@@ -137,7 +137,7 @@ Partial Class FormDashboardUser
         ' lblRoleInfo
         ' 
         lblRoleInfo.AutoSize = True
-        lblRoleInfo.Font = New Font("Segoe UI", 9F)
+        lblRoleInfo.Font = New Font("Segoe UI", 9.0F)
         lblRoleInfo.ForeColor = Color.FromArgb(CByte(200), CByte(225), CByte(255))
         lblRoleInfo.Location = New Point(19, 51)
         lblRoleInfo.Name = "lblRoleInfo"
@@ -152,7 +152,7 @@ Partial Class FormDashboardUser
         btnLogout.Cursor = Cursors.Hand
         btnLogout.FlatAppearance.BorderSize = 0
         btnLogout.FlatStyle = FlatStyle.Flat
-        btnLogout.Font = New Font("Segoe UI", 9F)
+        btnLogout.Font = New Font("Segoe UI", 9.0F)
         btnLogout.ForeColor = Color.White
         btnLogout.Location = New Point(1257, 27)
         btnLogout.Margin = New Padding(3, 4, 3, 4)
@@ -181,7 +181,7 @@ Partial Class FormDashboardUser
         btnPesan.Cursor = Cursors.Hand
         btnPesan.FlatAppearance.BorderSize = 0
         btnPesan.FlatStyle = FlatStyle.Flat
-        btnPesan.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnPesan.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         btnPesan.ForeColor = Color.White
         btnPesan.Location = New Point(11, 11)
         btnPesan.Margin = New Padding(3, 4, 3, 4)
@@ -197,7 +197,7 @@ Partial Class FormDashboardUser
         btnKelolaP.Cursor = Cursors.Hand
         btnKelolaP.FlatAppearance.BorderSize = 0
         btnKelolaP.FlatStyle = FlatStyle.Flat
-        btnKelolaP.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnKelolaP.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         btnKelolaP.ForeColor = Color.White
         btnKelolaP.Location = New Point(217, 11)
         btnKelolaP.Margin = New Padding(3, 4, 3, 4)
@@ -253,7 +253,7 @@ Partial Class FormDashboardUser
         ' lblKamarTitle
         ' 
         lblKamarTitle.AutoSize = True
-        lblKamarTitle.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        lblKamarTitle.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         lblKamarTitle.ForeColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
         lblKamarTitle.Location = New Point(23, 20)
         lblKamarTitle.Name = "lblKamarTitle"
@@ -264,7 +264,7 @@ Partial Class FormDashboardUser
         ' lblKey0
         ' 
         lblKey0.AutoSize = True
-        lblKey0.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey0.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         lblKey0.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         lblKey0.Location = New Point(23, 80)
         lblKey0.Name = "lblKey0"
@@ -275,7 +275,7 @@ Partial Class FormDashboardUser
         ' lblNoKamar
         ' 
         lblNoKamar.AutoSize = True
-        lblNoKamar.Font = New Font("Segoe UI", 10F)
+        lblNoKamar.Font = New Font("Segoe UI", 10.0F)
         lblNoKamar.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         lblNoKamar.Location = New Point(194, 80)
         lblNoKamar.Name = "lblNoKamar"
@@ -286,7 +286,7 @@ Partial Class FormDashboardUser
         ' lblKey1
         ' 
         lblKey1.AutoSize = True
-        lblKey1.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey1.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         lblKey1.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         lblKey1.Location = New Point(23, 124)
         lblKey1.Name = "lblKey1"
@@ -297,7 +297,7 @@ Partial Class FormDashboardUser
         ' lblTipeKamar
         ' 
         lblTipeKamar.AutoSize = True
-        lblTipeKamar.Font = New Font("Segoe UI", 10F)
+        lblTipeKamar.Font = New Font("Segoe UI", 10.0F)
         lblTipeKamar.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         lblTipeKamar.Location = New Point(194, 124)
         lblTipeKamar.Name = "lblTipeKamar"
@@ -308,7 +308,7 @@ Partial Class FormDashboardUser
         ' lblKey2
         ' 
         lblKey2.AutoSize = True
-        lblKey2.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey2.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         lblKey2.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         lblKey2.Location = New Point(23, 168)
         lblKey2.Name = "lblKey2"
@@ -319,7 +319,7 @@ Partial Class FormDashboardUser
         ' lblHarga
         ' 
         lblHarga.AutoSize = True
-        lblHarga.Font = New Font("Segoe UI", 10F)
+        lblHarga.Font = New Font("Segoe UI", 10.0F)
         lblHarga.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         lblHarga.Location = New Point(194, 168)
         lblHarga.Name = "lblHarga"
@@ -330,7 +330,7 @@ Partial Class FormDashboardUser
         ' lblKey3
         ' 
         lblKey3.AutoSize = True
-        lblKey3.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey3.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         lblKey3.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         lblKey3.Location = New Point(23, 212)
         lblKey3.Name = "lblKey3"
@@ -341,7 +341,7 @@ Partial Class FormDashboardUser
         ' lblDurasi
         ' 
         lblDurasi.AutoSize = True
-        lblDurasi.Font = New Font("Segoe UI", 10F)
+        lblDurasi.Font = New Font("Segoe UI", 10.0F)
         lblDurasi.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         lblDurasi.Location = New Point(194, 212)
         lblDurasi.Name = "lblDurasi"
@@ -352,7 +352,7 @@ Partial Class FormDashboardUser
         ' lblKey4
         ' 
         lblKey4.AutoSize = True
-        lblKey4.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey4.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         lblKey4.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         lblKey4.Location = New Point(23, 256)
         lblKey4.Name = "lblKey4"
@@ -363,7 +363,7 @@ Partial Class FormDashboardUser
         ' lblTotal
         ' 
         lblTotal.AutoSize = True
-        lblTotal.Font = New Font("Segoe UI", 10F)
+        lblTotal.Font = New Font("Segoe UI", 10.0F)
         lblTotal.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         lblTotal.Location = New Point(194, 256)
         lblTotal.Name = "lblTotal"
@@ -374,7 +374,7 @@ Partial Class FormDashboardUser
         ' lblKey5
         ' 
         lblKey5.AutoSize = True
-        lblKey5.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey5.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         lblKey5.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         lblKey5.Location = New Point(23, 300)
         lblKey5.Name = "lblKey5"
@@ -385,7 +385,7 @@ Partial Class FormDashboardUser
         ' lblTglMulai
         ' 
         lblTglMulai.AutoSize = True
-        lblTglMulai.Font = New Font("Segoe UI", 10F)
+        lblTglMulai.Font = New Font("Segoe UI", 10.0F)
         lblTglMulai.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         lblTglMulai.Location = New Point(194, 300)
         lblTglMulai.Name = "lblTglMulai"
@@ -396,7 +396,7 @@ Partial Class FormDashboardUser
         ' lblKey6
         ' 
         lblKey6.AutoSize = True
-        lblKey6.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey6.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         lblKey6.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         lblKey6.Location = New Point(23, 344)
         lblKey6.Name = "lblKey6"
@@ -407,7 +407,7 @@ Partial Class FormDashboardUser
         ' lblTglSelesai
         ' 
         lblTglSelesai.AutoSize = True
-        lblTglSelesai.Font = New Font("Segoe UI", 10F)
+        lblTglSelesai.Font = New Font("Segoe UI", 10.0F)
         lblTglSelesai.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         lblTglSelesai.Location = New Point(194, 344)
         lblTglSelesai.Name = "lblTglSelesai"
@@ -418,7 +418,7 @@ Partial Class FormDashboardUser
         ' lblKey7
         ' 
         lblKey7.AutoSize = True
-        lblKey7.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey7.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         lblKey7.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         lblKey7.Location = New Point(23, 388)
         lblKey7.Name = "lblKey7"
@@ -429,7 +429,7 @@ Partial Class FormDashboardUser
         ' lblDeskripsi
         ' 
         lblDeskripsi.AutoSize = True
-        lblDeskripsi.Font = New Font("Segoe UI", 10F)
+        lblDeskripsi.Font = New Font("Segoe UI", 10.0F)
         lblDeskripsi.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         lblDeskripsi.Location = New Point(194, 388)
         lblDeskripsi.Name = "lblDeskripsi"
@@ -440,7 +440,7 @@ Partial Class FormDashboardUser
         ' lblKey8
         ' 
         lblKey8.AutoSize = True
-        lblKey8.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey8.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         lblKey8.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         lblKey8.Location = New Point(23, 432)
         lblKey8.Name = "lblKey8"
@@ -451,7 +451,7 @@ Partial Class FormDashboardUser
         ' lblStatus
         ' 
         lblStatus.AutoSize = True
-        lblStatus.Font = New Font("Segoe UI", 10F)
+        lblStatus.Font = New Font("Segoe UI", 10.0F)
         lblStatus.ForeColor = Color.FromArgb(CByte(40), CByte(160), CByte(80))
         lblStatus.Location = New Point(194, 432)
         lblStatus.Name = "lblStatus"
@@ -465,7 +465,7 @@ Partial Class FormDashboardUser
         btnCetak.Cursor = Cursors.Hand
         btnCetak.FlatAppearance.BorderSize = 0
         btnCetak.FlatStyle = FlatStyle.Flat
-        btnCetak.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnCetak.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         btnCetak.ForeColor = Color.White
         btnCetak.Location = New Point(27, 487)
         btnCetak.Margin = New Padding(3, 4, 3, 4)
@@ -490,7 +490,7 @@ Partial Class FormDashboardUser
         ' lblTidakAda
         ' 
         lblTidakAda.AutoSize = True
-        lblTidakAda.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
+        lblTidakAda.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
         lblTidakAda.ForeColor = Color.FromArgb(CByte(160), CByte(160), CByte(160))
         lblTidakAda.Location = New Point(23, 40)
         lblTidakAda.Name = "lblTidakAda"
@@ -501,7 +501,7 @@ Partial Class FormDashboardUser
         ' lblSaran
         ' 
         lblSaran.AutoSize = True
-        lblSaran.Font = New Font("Segoe UI", 10F)
+        lblSaran.Font = New Font("Segoe UI", 10.0F)
         lblSaran.ForeColor = Color.FromArgb(CByte(120), CByte(120), CByte(120))
         lblSaran.Location = New Point(23, 100)
         lblSaran.Name = "lblSaran"
@@ -524,7 +524,7 @@ Partial Class FormDashboardUser
         ' 
         ' FormDashboardUser
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 747)
         Controls.Add(pnlContent)

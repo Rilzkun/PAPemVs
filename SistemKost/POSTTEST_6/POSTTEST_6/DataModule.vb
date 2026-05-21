@@ -3,9 +3,6 @@ Imports System.Data
 
 Module DataModule
 
-    ' ================================================================
-    '  HARGA DEFAULT PER TIPE KAMAR
-    ' ================================================================
     Public Function GetHargaDefault(tipe As String) As Integer
         Select Case tipe
             Case "Biasa" : Return 500000
@@ -14,10 +11,6 @@ Module DataModule
             Case Else : Return 0
         End Select
     End Function
-
-    ' ================================================================
-    '  MODUL: USERS (Login, Register, CRUD)
-    ' ================================================================
 
     Public Function Login(username As String, password As String) As DataRow
         Try
@@ -40,7 +33,6 @@ Module DataModule
     Public Function Register(username As String, password As String, namaLengkap As String,
                               noTelp As String, Optional role As String = "user") As Boolean
         Try
-            ' Cek username sudah ada
             If UsernameExists(username) Then
                 MessageBox.Show("Username sudah digunakan!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return False
@@ -210,10 +202,6 @@ Module DataModule
         End Try
     End Function
 
-    ' ================================================================
-    '  MODUL: KAMAR (CRUD)
-    ' ================================================================
-
     Public Function GetAllKamar() As DataTable
         Dim dt As New DataTable()
         Try
@@ -349,10 +337,6 @@ Module DataModule
             Return False
         End Try
     End Function
-
-    ' ================================================================
-    '  MODUL: PEMESANAN (CRUD)
-    ' ================================================================
 
     Public Function GetAllPemesanan() As DataTable
         Dim dt As New DataTable()
@@ -528,10 +512,6 @@ Module DataModule
             Return False
         End Try
     End Function
-
-    ' ================================================================
-    '  STATISTIK DASHBOARD ADMIN
-    ' ================================================================
 
     Public Function GetStatistik() As Dictionary(Of String, Integer)
         Dim stats As New Dictionary(Of String, Integer)

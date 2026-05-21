@@ -2,8 +2,6 @@
 Imports System.Drawing.Printing
 
 Public Class FormDashboardUser
-
-    ' ---- Event Load ----
     Private Sub FormDashboardUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblWelcome.Text = "Halo, " & SessionModule.NamaLengkap & "!"
         MuatInfoKamar()
@@ -77,7 +75,7 @@ Public Class FormDashboardUser
         dialogPrint.ShowDialog()
     End Sub
 
-    ' ---- Logika Menggambar Struk (Modul 7) ----
+    ' ---- Struk ----
     Private Sub docPrint_PrintPage(sender As Object, e As PrintPageEventArgs) Handles docPrint.PrintPage
         Dim fontJudul As New Font("Courier New", 16, FontStyle.Bold)
         Dim fontSub As New Font("Courier New", 11, FontStyle.Regular)

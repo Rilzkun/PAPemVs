@@ -5,7 +5,6 @@ Public Class FormPemesanan
     Dim idKamarTerpilih As Integer = 0
     Dim hargaKamarTerpilih As Integer = 0
 
-    ' ---- Load ----
     Private Sub FormPemesanan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TampilKamarTersedia()
         nudDurasi.Minimum = 1
@@ -16,7 +15,6 @@ Public Class FormPemesanan
         HitungTotal()
     End Sub
 
-    ' ---- Tampil daftar kamar tersedia ----
     Private Sub TampilKamarTersedia()
         Dim dt As DataTable = GetKamarTersedia()
         dgvKamar.DataSource = dt

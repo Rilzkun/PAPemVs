@@ -6,14 +6,13 @@ Public Class FormKelolaP
     Dim idKamarTerpilih As Integer = 0
     Dim statusPesanTerpilih As String = ""
 
-    ' ---- Load ----
     Private Sub FormKelolaP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         nudDurasi.Minimum = 1
         nudDurasi.Maximum = 24
         TampilData()
     End Sub
 
-    ' ---- Tampil data pesanan milik user yang login ----
+    ' Tampilan data pemesanan user di DGV
     Private Sub TampilData()
         Dim dt As DataTable = GetPemesananByUser(SessionModule.IdUser)
         dgvPesan.DataSource = dt
@@ -32,8 +31,6 @@ Public Class FormKelolaP
         If dgvPesan.Columns.Contains("tanggalMulai") Then dgvPesan.Columns("tanggalMulai").HeaderText = "Tgl Mulai"
         If dgvPesan.Columns.Contains("tanggalSelesai") Then dgvPesan.Columns("tanggalSelesai").HeaderText = "Tgl Selesai"
         If dgvPesan.Columns.Contains("statusPesan") Then dgvPesan.Columns("statusPesan").HeaderText = "Status"
-
-        ' Reset panel aksi
         pnlAksi.Enabled = False
         lblInfoTerpilih.Text = "Pilih pesanan dari tabel di atas"
         idPesanTerpilih = 0

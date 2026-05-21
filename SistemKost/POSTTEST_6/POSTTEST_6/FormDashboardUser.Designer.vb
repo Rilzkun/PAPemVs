@@ -17,224 +17,538 @@ Partial Class FormDashboardUser
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.MainMenu = New System.Windows.Forms.MenuStrip()
-        Me.mnuData = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuPesan = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuKelola = New System.Windows.Forms.ToolStripMenuItem()
-        Dim mnuSep As New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuLogout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.pnlHeader = New System.Windows.Forms.Panel()
-        Me.lblWelcome = New System.Windows.Forms.Label()
-        Me.lblRoleInfo = New System.Windows.Forms.Label()
-        Me.btnLogout = New System.Windows.Forms.Button()
-        Me.pnlNav = New System.Windows.Forms.Panel()
-        Me.btnPesan = New System.Windows.Forms.Button()
-        Me.btnKelolaP = New System.Windows.Forms.Button()
-        Me.pnlContent = New System.Windows.Forms.Panel()
-        Me.pnlKamarInfo = New System.Windows.Forms.Panel()
-        Me.lblKamarTitle = New System.Windows.Forms.Label()
-        Me.lblNoKamar = New System.Windows.Forms.Label()
-        Me.lblTipeKamar = New System.Windows.Forms.Label()
-        Me.lblHarga = New System.Windows.Forms.Label()
-        Me.lblDurasi = New System.Windows.Forms.Label()
-        Me.lblTotal = New System.Windows.Forms.Label()
-        Me.lblTglMulai = New System.Windows.Forms.Label()
-        Me.lblTglSelesai = New System.Windows.Forms.Label()
-        Me.lblDeskripsi = New System.Windows.Forms.Label()
-        Me.lblStatus = New System.Windows.Forms.Label()
-        Me.btnCetak = New System.Windows.Forms.Button()
-        Me.pnlTidakAdaPesan = New System.Windows.Forms.Panel()
-        Me.lblTidakAda = New System.Windows.Forms.Label()
-        Me.lblSaran = New System.Windows.Forms.Label()
-        Me.docPrint = New System.Drawing.Printing.PrintDocument()
-        Me.dialogPrint = New System.Windows.Forms.PrintPreviewDialog()
-
-        Me.MainMenu.SuspendLayout()
-        Me.pnlHeader.SuspendLayout()
-        Me.pnlNav.SuspendLayout()
-        Me.pnlContent.SuspendLayout()
-        Me.pnlKamarInfo.SuspendLayout()
-        Me.pnlTidakAdaPesan.SuspendLayout()
-        Me.SuspendLayout()
-
-        ' ---- MenuStrip ----
-        Me.MainMenu.BackColor = System.Drawing.Color.FromArgb(40, 100, 180)
-        Me.MainMenu.ForeColor = System.Drawing.Color.White
-        Me.MainMenu.Items.Add(Me.mnuData)
-        Me.MainMenu.Dock = System.Windows.Forms.DockStyle.Top
-        Me.mnuData.Text = "≡  Menu"
-        Me.mnuData.ForeColor = System.Drawing.Color.White
-        Me.mnuData.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuPesan, Me.mnuKelola, mnuSep, Me.mnuLogout})
-        Me.mnuPesan.Text = "📋  Pesan Kamar Baru"
-        Me.mnuKelola.Text = "📁  Kelola Pesanan Saya"
-        Me.mnuLogout.Text = "🚪  Logout"
-        Me.mnuLogout.ForeColor = System.Drawing.Color.Red
-
-        ' ---- pnlHeader ----
-        Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(40, 100, 180)
-        Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlHeader.Height = 70
-        Me.pnlHeader.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblWelcome, Me.lblRoleInfo, Me.btnLogout})
-
-        Me.lblWelcome.AutoSize = True
-        Me.lblWelcome.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold)
-        Me.lblWelcome.ForeColor = System.Drawing.Color.White
-        Me.lblWelcome.Location = New System.Drawing.Point(15, 10)
-        Me.lblWelcome.Text = "Halo, Penghuni!"
-
-        Me.lblRoleInfo.AutoSize = True
-        Me.lblRoleInfo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblRoleInfo.ForeColor = System.Drawing.Color.FromArgb(200, 225, 255)
-        Me.lblRoleInfo.Location = New System.Drawing.Point(17, 38)
-        Me.lblRoleInfo.Text = "👤  Role: Penghuni / User"
-
-        Me.btnLogout.BackColor = System.Drawing.Color.FromArgb(200, 60, 60)
-        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.FlatAppearance.BorderSize = 0
-        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnLogout.ForeColor = System.Drawing.Color.White
-        Me.btnLogout.Location = New System.Drawing.Point(600, 20)
-        Me.btnLogout.Size = New System.Drawing.Size(75, 30)
-        Me.btnLogout.Text = "Logout"
-        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right
-
-        ' ---- pnlNav ----
-        Me.pnlNav.BackColor = System.Drawing.Color.FromArgb(240, 244, 250)
-        Me.pnlNav.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlNav.Height = 50
-        Me.pnlNav.Padding = New System.Windows.Forms.Padding(10, 8, 10, 0)
-        Me.pnlNav.Controls.AddRange(New System.Windows.Forms.Control() {Me.btnPesan, Me.btnKelolaP})
-
-        Me.btnPesan.BackColor = System.Drawing.Color.FromArgb(30, 80, 160)
-        Me.btnPesan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPesan.FlatAppearance.BorderSize = 0
-        Me.btnPesan.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.btnPesan.ForeColor = System.Drawing.Color.White
-        Me.btnPesan.Location = New System.Drawing.Point(10, 8)
-        Me.btnPesan.Size = New System.Drawing.Size(170, 35)
-        Me.btnPesan.Text = "📋  Pesan Kamar"
-        Me.btnPesan.Cursor = System.Windows.Forms.Cursors.Hand
-
-        Me.btnKelolaP.BackColor = System.Drawing.Color.FromArgb(100, 60, 160)
-        Me.btnKelolaP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnKelolaP.FlatAppearance.BorderSize = 0
-        Me.btnKelolaP.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.btnKelolaP.ForeColor = System.Drawing.Color.White
-        Me.btnKelolaP.Location = New System.Drawing.Point(190, 8)
-        Me.btnKelolaP.Size = New System.Drawing.Size(180, 35)
-        Me.btnKelolaP.Text = "📁  Pesanan Saya"
-        Me.btnKelolaP.Cursor = System.Windows.Forms.Cursors.Hand
-
-        ' ---- pnlContent ----
-        Me.pnlContent.BackColor = System.Drawing.Color.FromArgb(240, 244, 250)
-        Me.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlContent.Padding = New System.Windows.Forms.Padding(20)
-        Me.pnlContent.Controls.AddRange(New System.Windows.Forms.Control() {Me.pnlKamarInfo, Me.pnlTidakAdaPesan})
-
-        ' ---- pnlKamarInfo ----
-        Me.pnlKamarInfo.BackColor = System.Drawing.Color.White
-        Me.pnlKamarInfo.Location = New System.Drawing.Point(20, 20)
-        Me.pnlKamarInfo.Size = New System.Drawing.Size(580, 420)
-        Me.pnlKamarInfo.Padding = New System.Windows.Forms.Padding(20)
-
-        Me.lblKamarTitle.AutoSize = True
-        Me.lblKamarTitle.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold)
-        Me.lblKamarTitle.ForeColor = System.Drawing.Color.FromArgb(30, 80, 160)
-        Me.lblKamarTitle.Location = New System.Drawing.Point(20, 15)
-        Me.lblKamarTitle.Text = "🏠  Kamar Yang Sedang Disewa"
-        Me.pnlKamarInfo.Controls.Add(Me.lblKamarTitle)
-
-        Dim lblKey0 As New System.Windows.Forms.Label()
-        lblKey0.AutoSize = True : lblKey0.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey0.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey0.Location = New System.Drawing.Point(20, 60) : lblKey0.Text = "Nomor Kamar:" : Me.pnlKamarInfo.Controls.Add(lblKey0)
-        Me.lblNoKamar.AutoSize = True : Me.lblNoKamar.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblNoKamar.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblNoKamar.Location = New System.Drawing.Point(170, 60) : Me.lblNoKamar.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblNoKamar)
-
-        Dim lblKey1 As New System.Windows.Forms.Label()
-        lblKey1.AutoSize = True : lblKey1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey1.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey1.Location = New System.Drawing.Point(20, 93) : lblKey1.Text = "Tipe Kamar:" : Me.pnlKamarInfo.Controls.Add(lblKey1)
-        Me.lblTipeKamar.AutoSize = True : Me.lblTipeKamar.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblTipeKamar.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblTipeKamar.Location = New System.Drawing.Point(170, 93) : Me.lblTipeKamar.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblTipeKamar)
-
-        Dim lblKey2 As New System.Windows.Forms.Label()
-        lblKey2.AutoSize = True : lblKey2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey2.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey2.Location = New System.Drawing.Point(20, 126) : lblKey2.Text = "Harga/Bulan:" : Me.pnlKamarInfo.Controls.Add(lblKey2)
-        Me.lblHarga.AutoSize = True : Me.lblHarga.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblHarga.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblHarga.Location = New System.Drawing.Point(170, 126) : Me.lblHarga.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblHarga)
-
-        Dim lblKey3 As New System.Windows.Forms.Label()
-        lblKey3.AutoSize = True : lblKey3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey3.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey3.Location = New System.Drawing.Point(20, 159) : lblKey3.Text = "Durasi Sewa:" : Me.pnlKamarInfo.Controls.Add(lblKey3)
-        Me.lblDurasi.AutoSize = True : Me.lblDurasi.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblDurasi.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblDurasi.Location = New System.Drawing.Point(170, 159) : Me.lblDurasi.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblDurasi)
-
-        Dim lblKey4 As New System.Windows.Forms.Label()
-        lblKey4.AutoSize = True : lblKey4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey4.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey4.Location = New System.Drawing.Point(20, 192) : lblKey4.Text = "Total Harga:" : Me.pnlKamarInfo.Controls.Add(lblKey4)
-        Me.lblTotal.AutoSize = True : Me.lblTotal.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblTotal.Location = New System.Drawing.Point(170, 192) : Me.lblTotal.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblTotal)
-
-        Dim lblKey5 As New System.Windows.Forms.Label()
-        lblKey5.AutoSize = True : lblKey5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey5.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey5.Location = New System.Drawing.Point(20, 225) : lblKey5.Text = "Tanggal Mulai:" : Me.pnlKamarInfo.Controls.Add(lblKey5)
-        Me.lblTglMulai.AutoSize = True : Me.lblTglMulai.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblTglMulai.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblTglMulai.Location = New System.Drawing.Point(170, 225) : Me.lblTglMulai.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblTglMulai)
-
-        Dim lblKey6 As New System.Windows.Forms.Label()
-        lblKey6.AutoSize = True : lblKey6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey6.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey6.Location = New System.Drawing.Point(20, 258) : lblKey6.Text = "Tanggal Selesai:" : Me.pnlKamarInfo.Controls.Add(lblKey6)
-        Me.lblTglSelesai.AutoSize = True : Me.lblTglSelesai.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblTglSelesai.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblTglSelesai.Location = New System.Drawing.Point(170, 258) : Me.lblTglSelesai.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblTglSelesai)
-
-        Dim lblKey7 As New System.Windows.Forms.Label()
-        lblKey7.AutoSize = True : lblKey7.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey7.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey7.Location = New System.Drawing.Point(20, 291) : lblKey7.Text = "Deskripsi:" : Me.pnlKamarInfo.Controls.Add(lblKey7)
-        Me.lblDeskripsi.AutoSize = True : Me.lblDeskripsi.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblDeskripsi.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblDeskripsi.Location = New System.Drawing.Point(170, 291) : Me.lblDeskripsi.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblDeskripsi)
-
-        Dim lblKey8 As New System.Windows.Forms.Label()
-        lblKey8.AutoSize = True : lblKey8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey8.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey8.Location = New System.Drawing.Point(20, 324) : lblKey8.Text = "Status:" : Me.pnlKamarInfo.Controls.Add(lblKey8)
-        Me.lblStatus.AutoSize = True : Me.lblStatus.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblStatus.ForeColor = System.Drawing.Color.FromArgb(40, 160, 80) : Me.lblStatus.Location = New System.Drawing.Point(170, 324) : Me.lblStatus.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblStatus)
-
-        ' Tombol Cetak Struk
-        Me.btnCetak.BackColor = System.Drawing.Color.FromArgb(40, 160, 80)
-        Me.btnCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCetak.FlatAppearance.BorderSize = 0
-        Me.btnCetak.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.btnCetak.ForeColor = System.Drawing.Color.White
-        Me.btnCetak.Location = New System.Drawing.Point(24, 365)
-        Me.btnCetak.Size = New System.Drawing.Size(160, 35)
-        Me.btnCetak.Text = "🖨️ Cetak Struk"
-        Me.btnCetak.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pnlKamarInfo.Controls.Add(Me.btnCetak)
-
-        ' ---- pnlTidakAdaPesan ----
-        Me.pnlTidakAdaPesan.BackColor = System.Drawing.Color.White
-        Me.pnlTidakAdaPesan.Location = New System.Drawing.Point(20, 20)
-        Me.pnlTidakAdaPesan.Size = New System.Drawing.Size(450, 180)
-        Me.pnlTidakAdaPesan.Padding = New System.Windows.Forms.Padding(20)
-
-        Me.lblTidakAda.AutoSize = True
-        Me.lblTidakAda.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTidakAda.ForeColor = System.Drawing.Color.FromArgb(160, 160, 160)
-        Me.lblTidakAda.Location = New System.Drawing.Point(20, 30)
-        Me.lblTidakAda.Text = "🏠  Belum Ada Kamar Aktif"
-
-        Me.lblSaran.AutoSize = True
-        Me.lblSaran.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblSaran.ForeColor = System.Drawing.Color.FromArgb(120, 120, 120)
-        Me.lblSaran.Location = New System.Drawing.Point(20, 75)
-        Me.lblSaran.Text = "Klik tombol 'Pesan Kamar' untuk menyewa kamar."
-        Me.pnlTidakAdaPesan.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblTidakAda, Me.lblSaran})
-
-        ' ---- Form ----
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(700, 560)
-        Me.Controls.AddRange(New System.Windows.Forms.Control() {Me.pnlContent, Me.pnlNav, Me.pnlHeader, Me.MainMenu})
-        Me.MainMenuStrip = Me.MainMenu
-        Me.MinimumSize = New System.Drawing.Size(650, 500)
-        Me.Name = "FormDashboardUser"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Dashboard - Sistem Kost"
-
-        Me.MainMenu.ResumeLayout(False)
-        Me.MainMenu.PerformLayout()
-        Me.pnlHeader.ResumeLayout(False)
-        Me.pnlHeader.PerformLayout()
-        Me.pnlNav.ResumeLayout(False)
-        Me.pnlKamarInfo.ResumeLayout(False)
-        Me.pnlKamarInfo.PerformLayout()
-        Me.pnlTidakAdaPesan.ResumeLayout(False)
-        Me.pnlTidakAdaPesan.PerformLayout()
-        Me.pnlContent.ResumeLayout(False)
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDashboardUser))
+        MainMenu = New MenuStrip()
+        mnuData = New ToolStripMenuItem()
+        mnuPesan = New ToolStripMenuItem()
+        mnuKelola = New ToolStripMenuItem()
+        mnuSep = New ToolStripSeparator()
+        mnuLogout = New ToolStripMenuItem()
+        pnlHeader = New Panel()
+        lblWelcome = New Label()
+        lblRoleInfo = New Label()
+        btnLogout = New Button()
+        pnlNav = New Panel()
+        btnPesan = New Button()
+        btnKelolaP = New Button()
+        pnlContent = New Panel()
+        pnlKamarInfo = New Panel()
+        lblKamarTitle = New Label()
+        lblKey0 = New Label()
+        lblNoKamar = New Label()
+        lblKey1 = New Label()
+        lblTipeKamar = New Label()
+        lblKey2 = New Label()
+        lblHarga = New Label()
+        lblKey3 = New Label()
+        lblDurasi = New Label()
+        lblKey4 = New Label()
+        lblTotal = New Label()
+        lblKey5 = New Label()
+        lblTglMulai = New Label()
+        lblKey6 = New Label()
+        lblTglSelesai = New Label()
+        lblKey7 = New Label()
+        lblDeskripsi = New Label()
+        lblKey8 = New Label()
+        lblStatus = New Label()
+        btnCetak = New Button()
+        pnlTidakAdaPesan = New Panel()
+        lblTidakAda = New Label()
+        lblSaran = New Label()
+        docPrint = New Printing.PrintDocument()
+        dialogPrint = New PrintPreviewDialog()
+        MainMenu.SuspendLayout()
+        pnlHeader.SuspendLayout()
+        pnlNav.SuspendLayout()
+        pnlContent.SuspendLayout()
+        pnlKamarInfo.SuspendLayout()
+        pnlTidakAdaPesan.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' MainMenu
+        ' 
+        MainMenu.BackColor = Color.FromArgb(CByte(40), CByte(100), CByte(180))
+        MainMenu.ForeColor = Color.White
+        MainMenu.ImageScalingSize = New Size(20, 20)
+        MainMenu.Items.AddRange(New ToolStripItem() {mnuData})
+        MainMenu.Location = New Point(0, 0)
+        MainMenu.Name = "MainMenu"
+        MainMenu.Padding = New Padding(7, 3, 0, 3)
+        MainMenu.Size = New Size(800, 30)
+        MainMenu.TabIndex = 3
+        ' 
+        ' mnuData
+        ' 
+        mnuData.DropDownItems.AddRange(New ToolStripItem() {mnuPesan, mnuKelola, mnuSep, mnuLogout})
+        mnuData.ForeColor = Color.White
+        mnuData.Name = "mnuData"
+        mnuData.Size = New Size(78, 24)
+        mnuData.Text = "≡  Menu"
+        ' 
+        ' mnuPesan
+        ' 
+        mnuPesan.Name = "mnuPesan"
+        mnuPesan.Size = New Size(255, 26)
+        mnuPesan.Text = "📋  Pesan Kamar Baru"
+        ' 
+        ' mnuKelola
+        ' 
+        mnuKelola.Name = "mnuKelola"
+        mnuKelola.Size = New Size(255, 26)
+        mnuKelola.Text = "📁  Kelola Pesanan Saya"
+        ' 
+        ' mnuSep
+        ' 
+        mnuSep.Name = "mnuSep"
+        mnuSep.Size = New Size(252, 6)
+        ' 
+        ' mnuLogout
+        ' 
+        mnuLogout.ForeColor = Color.Red
+        mnuLogout.Name = "mnuLogout"
+        mnuLogout.Size = New Size(255, 26)
+        mnuLogout.Text = "🚪  Logout"
+        ' 
+        ' pnlHeader
+        ' 
+        pnlHeader.BackColor = Color.FromArgb(CByte(40), CByte(100), CByte(180))
+        pnlHeader.Controls.Add(lblWelcome)
+        pnlHeader.Controls.Add(lblRoleInfo)
+        pnlHeader.Controls.Add(btnLogout)
+        pnlHeader.Dock = DockStyle.Top
+        pnlHeader.Location = New Point(0, 30)
+        pnlHeader.Margin = New Padding(3, 4, 3, 4)
+        pnlHeader.Name = "pnlHeader"
+        pnlHeader.Size = New Size(800, 93)
+        pnlHeader.TabIndex = 2
+        ' 
+        ' lblWelcome
+        ' 
+        lblWelcome.AutoSize = True
+        lblWelcome.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        lblWelcome.ForeColor = Color.White
+        lblWelcome.Location = New Point(17, 13)
+        lblWelcome.Name = "lblWelcome"
+        lblWelcome.Size = New Size(177, 30)
+        lblWelcome.TabIndex = 0
+        lblWelcome.Text = "Halo, Penghuni!"
+        ' 
+        ' lblRoleInfo
+        ' 
+        lblRoleInfo.AutoSize = True
+        lblRoleInfo.Font = New Font("Segoe UI", 9F)
+        lblRoleInfo.ForeColor = Color.FromArgb(CByte(200), CByte(225), CByte(255))
+        lblRoleInfo.Location = New Point(19, 51)
+        lblRoleInfo.Name = "lblRoleInfo"
+        lblRoleInfo.Size = New Size(178, 20)
+        lblRoleInfo.TabIndex = 1
+        lblRoleInfo.Text = "👤  Role: Penghuni / User"
+        ' 
+        ' btnLogout
+        ' 
+        btnLogout.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnLogout.BackColor = Color.FromArgb(CByte(200), CByte(60), CByte(60))
+        btnLogout.Cursor = Cursors.Hand
+        btnLogout.FlatAppearance.BorderSize = 0
+        btnLogout.FlatStyle = FlatStyle.Flat
+        btnLogout.Font = New Font("Segoe UI", 9F)
+        btnLogout.ForeColor = Color.White
+        btnLogout.Location = New Point(1257, 27)
+        btnLogout.Margin = New Padding(3, 4, 3, 4)
+        btnLogout.Name = "btnLogout"
+        btnLogout.Size = New Size(86, 40)
+        btnLogout.TabIndex = 2
+        btnLogout.Text = "Logout"
+        btnLogout.UseVisualStyleBackColor = False
+        ' 
+        ' pnlNav
+        ' 
+        pnlNav.BackColor = Color.FromArgb(CByte(240), CByte(244), CByte(250))
+        pnlNav.Controls.Add(btnPesan)
+        pnlNav.Controls.Add(btnKelolaP)
+        pnlNav.Dock = DockStyle.Top
+        pnlNav.Location = New Point(0, 123)
+        pnlNav.Margin = New Padding(3, 4, 3, 4)
+        pnlNav.Name = "pnlNav"
+        pnlNav.Padding = New Padding(11, 11, 11, 0)
+        pnlNav.Size = New Size(800, 67)
+        pnlNav.TabIndex = 1
+        ' 
+        ' btnPesan
+        ' 
+        btnPesan.BackColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
+        btnPesan.Cursor = Cursors.Hand
+        btnPesan.FlatAppearance.BorderSize = 0
+        btnPesan.FlatStyle = FlatStyle.Flat
+        btnPesan.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnPesan.ForeColor = Color.White
+        btnPesan.Location = New Point(11, 11)
+        btnPesan.Margin = New Padding(3, 4, 3, 4)
+        btnPesan.Name = "btnPesan"
+        btnPesan.Size = New Size(194, 47)
+        btnPesan.TabIndex = 0
+        btnPesan.Text = "📋  Pesan Kamar"
+        btnPesan.UseVisualStyleBackColor = False
+        ' 
+        ' btnKelolaP
+        ' 
+        btnKelolaP.BackColor = Color.FromArgb(CByte(100), CByte(60), CByte(160))
+        btnKelolaP.Cursor = Cursors.Hand
+        btnKelolaP.FlatAppearance.BorderSize = 0
+        btnKelolaP.FlatStyle = FlatStyle.Flat
+        btnKelolaP.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnKelolaP.ForeColor = Color.White
+        btnKelolaP.Location = New Point(217, 11)
+        btnKelolaP.Margin = New Padding(3, 4, 3, 4)
+        btnKelolaP.Name = "btnKelolaP"
+        btnKelolaP.Size = New Size(206, 47)
+        btnKelolaP.TabIndex = 1
+        btnKelolaP.Text = "📁  Pesanan Saya"
+        btnKelolaP.UseVisualStyleBackColor = False
+        ' 
+        ' pnlContent
+        ' 
+        pnlContent.BackColor = Color.FromArgb(CByte(240), CByte(244), CByte(250))
+        pnlContent.Controls.Add(pnlKamarInfo)
+        pnlContent.Controls.Add(pnlTidakAdaPesan)
+        pnlContent.Dock = DockStyle.Fill
+        pnlContent.Location = New Point(0, 190)
+        pnlContent.Margin = New Padding(3, 4, 3, 4)
+        pnlContent.Name = "pnlContent"
+        pnlContent.Padding = New Padding(23, 27, 23, 27)
+        pnlContent.Size = New Size(800, 557)
+        pnlContent.TabIndex = 0
+        ' 
+        ' pnlKamarInfo
+        ' 
+        pnlKamarInfo.BackColor = Color.White
+        pnlKamarInfo.Controls.Add(lblKamarTitle)
+        pnlKamarInfo.Controls.Add(lblKey0)
+        pnlKamarInfo.Controls.Add(lblNoKamar)
+        pnlKamarInfo.Controls.Add(lblKey1)
+        pnlKamarInfo.Controls.Add(lblTipeKamar)
+        pnlKamarInfo.Controls.Add(lblKey2)
+        pnlKamarInfo.Controls.Add(lblHarga)
+        pnlKamarInfo.Controls.Add(lblKey3)
+        pnlKamarInfo.Controls.Add(lblDurasi)
+        pnlKamarInfo.Controls.Add(lblKey4)
+        pnlKamarInfo.Controls.Add(lblTotal)
+        pnlKamarInfo.Controls.Add(lblKey5)
+        pnlKamarInfo.Controls.Add(lblTglMulai)
+        pnlKamarInfo.Controls.Add(lblKey6)
+        pnlKamarInfo.Controls.Add(lblTglSelesai)
+        pnlKamarInfo.Controls.Add(lblKey7)
+        pnlKamarInfo.Controls.Add(lblDeskripsi)
+        pnlKamarInfo.Controls.Add(lblKey8)
+        pnlKamarInfo.Controls.Add(lblStatus)
+        pnlKamarInfo.Controls.Add(btnCetak)
+        pnlKamarInfo.Location = New Point(23, 27)
+        pnlKamarInfo.Margin = New Padding(3, 4, 3, 4)
+        pnlKamarInfo.Name = "pnlKamarInfo"
+        pnlKamarInfo.Padding = New Padding(23, 27, 23, 27)
+        pnlKamarInfo.Size = New Size(663, 560)
+        pnlKamarInfo.TabIndex = 0
+        ' 
+        ' lblKamarTitle
+        ' 
+        lblKamarTitle.AutoSize = True
+        lblKamarTitle.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        lblKamarTitle.ForeColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
+        lblKamarTitle.Location = New Point(23, 20)
+        lblKamarTitle.Name = "lblKamarTitle"
+        lblKamarTitle.Size = New Size(342, 30)
+        lblKamarTitle.TabIndex = 0
+        lblKamarTitle.Text = "🏠  Kamar Yang Sedang Disewa"
+        ' 
+        ' lblKey0
+        ' 
+        lblKey0.AutoSize = True
+        lblKey0.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey0.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        lblKey0.Location = New Point(23, 80)
+        lblKey0.Name = "lblKey0"
+        lblKey0.Size = New Size(129, 23)
+        lblKey0.TabIndex = 1
+        lblKey0.Text = "Nomor Kamar:"
+        ' 
+        ' lblNoKamar
+        ' 
+        lblNoKamar.AutoSize = True
+        lblNoKamar.Font = New Font("Segoe UI", 10F)
+        lblNoKamar.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        lblNoKamar.Location = New Point(194, 80)
+        lblNoKamar.Name = "lblNoKamar"
+        lblNoKamar.Size = New Size(17, 23)
+        lblNoKamar.TabIndex = 2
+        lblNoKamar.Text = "-"
+        ' 
+        ' lblKey1
+        ' 
+        lblKey1.AutoSize = True
+        lblKey1.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey1.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        lblKey1.Location = New Point(23, 124)
+        lblKey1.Name = "lblKey1"
+        lblKey1.Size = New Size(108, 23)
+        lblKey1.TabIndex = 3
+        lblKey1.Text = "Tipe Kamar:"
+        ' 
+        ' lblTipeKamar
+        ' 
+        lblTipeKamar.AutoSize = True
+        lblTipeKamar.Font = New Font("Segoe UI", 10F)
+        lblTipeKamar.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        lblTipeKamar.Location = New Point(194, 124)
+        lblTipeKamar.Name = "lblTipeKamar"
+        lblTipeKamar.Size = New Size(17, 23)
+        lblTipeKamar.TabIndex = 4
+        lblTipeKamar.Text = "-"
+        ' 
+        ' lblKey2
+        ' 
+        lblKey2.AutoSize = True
+        lblKey2.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey2.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        lblKey2.Location = New Point(23, 168)
+        lblKey2.Name = "lblKey2"
+        lblKey2.Size = New Size(117, 23)
+        lblKey2.TabIndex = 5
+        lblKey2.Text = "Harga/Bulan:"
+        ' 
+        ' lblHarga
+        ' 
+        lblHarga.AutoSize = True
+        lblHarga.Font = New Font("Segoe UI", 10F)
+        lblHarga.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        lblHarga.Location = New Point(194, 168)
+        lblHarga.Name = "lblHarga"
+        lblHarga.Size = New Size(17, 23)
+        lblHarga.TabIndex = 6
+        lblHarga.Text = "-"
+        ' 
+        ' lblKey3
+        ' 
+        lblKey3.AutoSize = True
+        lblKey3.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey3.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        lblKey3.Location = New Point(23, 212)
+        lblKey3.Name = "lblKey3"
+        lblKey3.Size = New Size(113, 23)
+        lblKey3.TabIndex = 7
+        lblKey3.Text = "Durasi Sewa:"
+        ' 
+        ' lblDurasi
+        ' 
+        lblDurasi.AutoSize = True
+        lblDurasi.Font = New Font("Segoe UI", 10F)
+        lblDurasi.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        lblDurasi.Location = New Point(194, 212)
+        lblDurasi.Name = "lblDurasi"
+        lblDurasi.Size = New Size(17, 23)
+        lblDurasi.TabIndex = 8
+        lblDurasi.Text = "-"
+        ' 
+        ' lblKey4
+        ' 
+        lblKey4.AutoSize = True
+        lblKey4.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey4.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        lblKey4.Location = New Point(23, 256)
+        lblKey4.Name = "lblKey4"
+        lblKey4.Size = New Size(108, 23)
+        lblKey4.TabIndex = 9
+        lblKey4.Text = "Total Harga:"
+        ' 
+        ' lblTotal
+        ' 
+        lblTotal.AutoSize = True
+        lblTotal.Font = New Font("Segoe UI", 10F)
+        lblTotal.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        lblTotal.Location = New Point(194, 256)
+        lblTotal.Name = "lblTotal"
+        lblTotal.Size = New Size(17, 23)
+        lblTotal.TabIndex = 10
+        lblTotal.Text = "-"
+        ' 
+        ' lblKey5
+        ' 
+        lblKey5.AutoSize = True
+        lblKey5.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey5.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        lblKey5.Location = New Point(23, 300)
+        lblKey5.Name = "lblKey5"
+        lblKey5.Size = New Size(129, 23)
+        lblKey5.TabIndex = 11
+        lblKey5.Text = "Tanggal Mulai:"
+        ' 
+        ' lblTglMulai
+        ' 
+        lblTglMulai.AutoSize = True
+        lblTglMulai.Font = New Font("Segoe UI", 10F)
+        lblTglMulai.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        lblTglMulai.Location = New Point(194, 300)
+        lblTglMulai.Name = "lblTglMulai"
+        lblTglMulai.Size = New Size(17, 23)
+        lblTglMulai.TabIndex = 12
+        lblTglMulai.Text = "-"
+        ' 
+        ' lblKey6
+        ' 
+        lblKey6.AutoSize = True
+        lblKey6.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey6.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        lblKey6.Location = New Point(23, 344)
+        lblKey6.Name = "lblKey6"
+        lblKey6.Size = New Size(138, 23)
+        lblKey6.TabIndex = 13
+        lblKey6.Text = "Tanggal Selesai:"
+        ' 
+        ' lblTglSelesai
+        ' 
+        lblTglSelesai.AutoSize = True
+        lblTglSelesai.Font = New Font("Segoe UI", 10F)
+        lblTglSelesai.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        lblTglSelesai.Location = New Point(194, 344)
+        lblTglSelesai.Name = "lblTglSelesai"
+        lblTglSelesai.Size = New Size(17, 23)
+        lblTglSelesai.TabIndex = 14
+        lblTglSelesai.Text = "-"
+        ' 
+        ' lblKey7
+        ' 
+        lblKey7.AutoSize = True
+        lblKey7.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey7.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        lblKey7.Location = New Point(23, 388)
+        lblKey7.Name = "lblKey7"
+        lblKey7.Size = New Size(89, 23)
+        lblKey7.TabIndex = 15
+        lblKey7.Text = "Deskripsi:"
+        ' 
+        ' lblDeskripsi
+        ' 
+        lblDeskripsi.AutoSize = True
+        lblDeskripsi.Font = New Font("Segoe UI", 10F)
+        lblDeskripsi.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        lblDeskripsi.Location = New Point(194, 388)
+        lblDeskripsi.Name = "lblDeskripsi"
+        lblDeskripsi.Size = New Size(17, 23)
+        lblDeskripsi.TabIndex = 16
+        lblDeskripsi.Text = "-"
+        ' 
+        ' lblKey8
+        ' 
+        lblKey8.AutoSize = True
+        lblKey8.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblKey8.ForeColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        lblKey8.Location = New Point(23, 432)
+        lblKey8.Name = "lblKey8"
+        lblKey8.Size = New Size(65, 23)
+        lblKey8.TabIndex = 17
+        lblKey8.Text = "Status:"
+        ' 
+        ' lblStatus
+        ' 
+        lblStatus.AutoSize = True
+        lblStatus.Font = New Font("Segoe UI", 10F)
+        lblStatus.ForeColor = Color.FromArgb(CByte(40), CByte(160), CByte(80))
+        lblStatus.Location = New Point(194, 432)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(17, 23)
+        lblStatus.TabIndex = 18
+        lblStatus.Text = "-"
+        ' 
+        ' btnCetak
+        ' 
+        btnCetak.BackColor = Color.FromArgb(CByte(40), CByte(160), CByte(80))
+        btnCetak.Cursor = Cursors.Hand
+        btnCetak.FlatAppearance.BorderSize = 0
+        btnCetak.FlatStyle = FlatStyle.Flat
+        btnCetak.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnCetak.ForeColor = Color.White
+        btnCetak.Location = New Point(27, 487)
+        btnCetak.Margin = New Padding(3, 4, 3, 4)
+        btnCetak.Name = "btnCetak"
+        btnCetak.Size = New Size(183, 47)
+        btnCetak.TabIndex = 19
+        btnCetak.Text = "🖨️ Cetak Struk"
+        btnCetak.UseVisualStyleBackColor = False
+        ' 
+        ' pnlTidakAdaPesan
+        ' 
+        pnlTidakAdaPesan.BackColor = Color.White
+        pnlTidakAdaPesan.Controls.Add(lblTidakAda)
+        pnlTidakAdaPesan.Controls.Add(lblSaran)
+        pnlTidakAdaPesan.Location = New Point(23, 27)
+        pnlTidakAdaPesan.Margin = New Padding(3, 4, 3, 4)
+        pnlTidakAdaPesan.Name = "pnlTidakAdaPesan"
+        pnlTidakAdaPesan.Padding = New Padding(23, 27, 23, 27)
+        pnlTidakAdaPesan.Size = New Size(514, 240)
+        pnlTidakAdaPesan.TabIndex = 1
+        ' 
+        ' lblTidakAda
+        ' 
+        lblTidakAda.AutoSize = True
+        lblTidakAda.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
+        lblTidakAda.ForeColor = Color.FromArgb(CByte(160), CByte(160), CByte(160))
+        lblTidakAda.Location = New Point(23, 40)
+        lblTidakAda.Name = "lblTidakAda"
+        lblTidakAda.Size = New Size(329, 32)
+        lblTidakAda.TabIndex = 0
+        lblTidakAda.Text = "🏠  Belum Ada Kamar Aktif"
+        ' 
+        ' lblSaran
+        ' 
+        lblSaran.AutoSize = True
+        lblSaran.Font = New Font("Segoe UI", 10F)
+        lblSaran.ForeColor = Color.FromArgb(CByte(120), CByte(120), CByte(120))
+        lblSaran.Location = New Point(23, 100)
+        lblSaran.Name = "lblSaran"
+        lblSaran.Size = New Size(389, 23)
+        lblSaran.TabIndex = 1
+        lblSaran.Text = "Klik tombol 'Pesan Kamar' untuk menyewa kamar."
+        ' 
+        ' docPrint
+        ' 
+        ' 
+        ' dialogPrint
+        ' 
+        dialogPrint.AutoScrollMargin = New Size(0, 0)
+        dialogPrint.AutoScrollMinSize = New Size(0, 0)
+        dialogPrint.ClientSize = New Size(400, 300)
+        dialogPrint.Enabled = True
+        dialogPrint.Icon = CType(resources.GetObject("dialogPrint.Icon"), Icon)
+        dialogPrint.Name = "dialogPrint"
+        dialogPrint.Visible = False
+        ' 
+        ' FormDashboardUser
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(800, 747)
+        Controls.Add(pnlContent)
+        Controls.Add(pnlNav)
+        Controls.Add(pnlHeader)
+        Controls.Add(MainMenu)
+        MainMenuStrip = MainMenu
+        Margin = New Padding(3, 4, 3, 4)
+        MinimumSize = New Size(740, 651)
+        Name = "FormDashboardUser"
+        StartPosition = FormStartPosition.CenterParent
+        Text = "Dashboard - Sistem Kost"
+        MainMenu.ResumeLayout(False)
+        MainMenu.PerformLayout()
+        pnlHeader.ResumeLayout(False)
+        pnlHeader.PerformLayout()
+        pnlNav.ResumeLayout(False)
+        pnlContent.ResumeLayout(False)
+        pnlKamarInfo.ResumeLayout(False)
+        pnlKamarInfo.PerformLayout()
+        pnlTidakAdaPesan.ResumeLayout(False)
+        pnlTidakAdaPesan.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents MainMenu As System.Windows.Forms.MenuStrip
@@ -268,5 +582,15 @@ Partial Class FormDashboardUser
 
     Friend WithEvents docPrint As System.Drawing.Printing.PrintDocument
     Friend WithEvents dialogPrint As System.Windows.Forms.PrintPreviewDialog
+    Friend WithEvents mnuSep As ToolStripSeparator
+    Friend WithEvents lblKey0 As Label
+    Friend WithEvents lblKey1 As Label
+    Friend WithEvents lblKey2 As Label
+    Friend WithEvents lblKey3 As Label
+    Friend WithEvents lblKey4 As Label
+    Friend WithEvents lblKey5 As Label
+    Friend WithEvents lblKey6 As Label
+    Friend WithEvents lblKey7 As Label
+    Friend WithEvents lblKey8 As Label
 
 End Class

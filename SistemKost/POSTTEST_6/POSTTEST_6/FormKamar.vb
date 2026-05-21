@@ -3,8 +3,6 @@
 Public Class FormKamar
 
     Dim idKamarTerpilih As Integer = 0
-
-    ' ---- Event Load ----
     Private Sub FormKamar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbTipe.Items.AddRange(New Object() {"Biasa", "Eksekutif", "VIP"})
         cmbStatus.Items.AddRange(New Object() {"Tersedia", "Dipesan", "Maintenance"})
@@ -12,15 +10,12 @@ Public Class FormKamar
         KosongForm()
     End Sub
 
-    ' ---- Pengaturan Layout Responsif ----
     Private Sub FormKamar_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
-        ' Pastikan tombol tutup selalu berada di pojok kanan atas saat form diubah ukurannya
         If btnTutup IsNot Nothing Then
             btnTutup.Location = New Point(Me.ClientSize.Width - 90, 13)
         End If
     End Sub
 
-    ' ---- Modul Muat Data ----
     Private Sub TampilData()
         Dim dt As DataTable = GetAllKamar()
         dgvKamar.DataSource = dt
@@ -51,7 +46,7 @@ Public Class FormKamar
         txtNomor.Focus()
     End Sub
 
-    ' ---- AutoFill Harga berdasarkan Tipe ----
+    ' ---- Harga berdasarkan Tipe ----
     Private Sub cmbTipe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTipe.SelectedIndexChanged
         If cmbTipe.SelectedItem IsNot Nothing Then
             txtHarga.Text = GetHargaDefault(cmbTipe.SelectedItem.ToString()).ToString()
@@ -161,7 +156,7 @@ Public Class FormKamar
         Me.Close()
     End Sub
 
-    ' ---- Mencegah Input Selain Angka Pada Field Harga ----
+    ' ---- Input Selain Angka Pada Field Harga ----
     Private Sub txtHarga_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtHarga.KeyPress
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
             e.Handled = True

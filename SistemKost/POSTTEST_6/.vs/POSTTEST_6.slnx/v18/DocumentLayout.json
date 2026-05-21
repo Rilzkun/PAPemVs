@@ -1,0 +1,250 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formpenghuni.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formpenghuni.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formpenghuni.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formpenghuni.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formpenghuni.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formpenghuni.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formpemesanan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formpemesanan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formkelolap.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formkelolap.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formkamar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formkamar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formdashboardadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formdashboardadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formkelolap.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formkelolap.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formkelolap.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formkelolap.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formdashboarduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formdashboarduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formdashboarduser.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formdashboarduser.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formdashboarduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formdashboarduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|c:\\users\\lenovo\\downloads\\pa pemvis\\sistemkost\\posttest_6\\posttest_6\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CD3CDB20-0F69-5E64-8845-3FBD39A3A2F3}|POSTTEST_6\\POSTTEST_6.vbproj|solutionrelative:posttest_6\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormPenghuni.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormPenghuni.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormPenghuni.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormPenghuni.vb",
+              "RelativeToolTip": "POSTTEST_6\\FormPenghuni.vb",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAUwG0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:54:16.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormPenghuni.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormPenghuni.Designer.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormPenghuni.Designer.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormPenghuni.Designer.vb",
+              "RelativeToolTip": "POSTTEST_6\\FormPenghuni.Designer.vb",
+              "ViewState": "AgIAANkAAAAAAAAAAAAUwPgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:54:08.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormKelolaP.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormKelolaP.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormKelolaP.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormKelolaP.vb",
+              "RelativeToolTip": "POSTTEST_6\\FormKelolaP.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:44:54.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormPemesanan.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormPemesanan.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormPemesanan.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormPemesanan.vb [Design]",
+              "RelativeToolTip": "POSTTEST_6\\FormPemesanan.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:42:21.013Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormPenghuni.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormPenghuni.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormPenghuni.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormPenghuni.vb [Design]",
+              "RelativeToolTip": "POSTTEST_6\\FormPenghuni.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:42:23.712Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormKamar.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormKamar.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormKamar.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormKamar.vb [Design]",
+              "RelativeToolTip": "POSTTEST_6\\FormKamar.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:53:23.025Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormDashboardAdmin.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormDashboardAdmin.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormDashboardAdmin.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormDashboardAdmin.vb [Design]",
+              "RelativeToolTip": "POSTTEST_6\\FormDashboardAdmin.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:43:15.569Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormKelolaP.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormKelolaP.Designer.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormKelolaP.Designer.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormKelolaP.Designer.vb",
+              "RelativeToolTip": "POSTTEST_6\\FormKelolaP.Designer.vb",
+              "ViewState": "AgIAALsAAAAAAAAAAADwv9EAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:44:57.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormKelolaP.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormKelolaP.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormKelolaP.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormKelolaP.vb [Design]",
+              "RelativeToolTip": "POSTTEST_6\\FormKelolaP.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:44:50.279Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormDashboardUser.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormDashboardUser.Designer.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormDashboardUser.Designer.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormDashboardUser.Designer.vb",
+              "RelativeToolTip": "POSTTEST_6\\FormDashboardUser.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:26:46.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormDashboardUser.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormDashboardUser.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormDashboardUser.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormDashboardUser.vb",
+              "RelativeToolTip": "POSTTEST_6\\FormDashboardUser.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:28:51.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormDashboardUser.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormDashboardUser.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormDashboardUser.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormDashboardUser.vb [Design]",
+              "RelativeToolTip": "POSTTEST_6\\FormDashboardUser.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:36:33.275Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormRegister.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormRegister.vb",
+              "RelativeDocumentMoniker": "POSTTEST_6\\FormRegister.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\PA PEMVIS\\SistemKost\\POSTTEST_6\\POSTTEST_6\\FormRegister.vb [Design]",
+              "RelativeToolTip": "POSTTEST_6\\FormRegister.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-21T16:42:25.952Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

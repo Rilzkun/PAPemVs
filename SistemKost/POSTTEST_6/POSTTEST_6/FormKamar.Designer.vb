@@ -17,249 +17,409 @@ Partial Class FormKamar
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.pnlHeader = New System.Windows.Forms.Panel()
-        Me.lblTitle = New System.Windows.Forms.Label()
-        Me.btnTutup = New System.Windows.Forms.Button()
-        Me.pnlInput = New System.Windows.Forms.Panel()
-        Me.grpData = New System.Windows.Forms.GroupBox()
-        Me.lblNomor = New System.Windows.Forms.Label()
-        Me.txtNomor = New System.Windows.Forms.TextBox()
-        Me.lblTipe = New System.Windows.Forms.Label()
-        Me.cmbTipe = New System.Windows.Forms.ComboBox()
-        Me.lblHarga = New System.Windows.Forms.Label()
-        Me.txtHarga = New System.Windows.Forms.TextBox()
-        Me.lblStatus = New System.Windows.Forms.Label()
-        Me.cmbStatus = New System.Windows.Forms.ComboBox()
-        Me.grpDesk = New System.Windows.Forms.GroupBox()
-        Me.lblDeskripsi = New System.Windows.Forms.Label()
-        Me.txtDeskripsi = New System.Windows.Forms.TextBox()
-        Me.grpAksi = New System.Windows.Forms.GroupBox()
-        Me.btnTambah = New System.Windows.Forms.Button()
-        Me.btnUbah = New System.Windows.Forms.Button()
-        Me.btnHapus = New System.Windows.Forms.Button()
-        Me.btnBatal = New System.Windows.Forms.Button()
-        Me.grpCari = New System.Windows.Forms.GroupBox()
-        Me.lblCari = New System.Windows.Forms.Label()
-        Me.txtCari = New System.Windows.Forms.TextBox()
-        Me.dgvKamar = New System.Windows.Forms.DataGridView()
-
-        Me.pnlHeader.SuspendLayout()
-        Me.pnlInput.SuspendLayout()
-        Me.grpData.SuspendLayout()
-        Me.grpDesk.SuspendLayout()
-        Me.grpAksi.SuspendLayout()
-        Me.grpCari.SuspendLayout()
-        CType(Me.dgvKamar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-
-        ' ---- pnlHeader ----
-        Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(30, 80, 160)
-        Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlHeader.Location = New System.Drawing.Point(0, 0)
-        Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(900, 55)
-        Me.pnlHeader.TabIndex = 0
-        Me.pnlHeader.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblTitle, Me.btnTutup})
-
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTitle.ForeColor = System.Drawing.Color.White
-        Me.lblTitle.Location = New System.Drawing.Point(15, 15)
-        Me.lblTitle.Text = "🏠  Manajemen Kamar"
-
-        Me.btnTutup.BackColor = System.Drawing.Color.FromArgb(200, 60, 60)
-        Me.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTutup.FlatAppearance.BorderSize = 0
-        Me.btnTutup.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnTutup.ForeColor = System.Drawing.Color.White
-        Me.btnTutup.Location = New System.Drawing.Point(810, 13)
-        Me.btnTutup.Size = New System.Drawing.Size(70, 28)
-        Me.btnTutup.Text = "✕  Tutup"
-        Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnTutup.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right
-
-        ' ---- pnlInput ----
-        Me.pnlInput.BackColor = System.Drawing.Color.White
-        Me.pnlInput.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlInput.Location = New System.Drawing.Point(0, 55)
-        Me.pnlInput.Name = "pnlInput"
-        Me.pnlInput.Padding = New System.Windows.Forms.Padding(10)
-        Me.pnlInput.Size = New System.Drawing.Size(280, 545)
-        Me.pnlInput.TabIndex = 1
-        Me.pnlInput.Controls.AddRange(New System.Windows.Forms.Control() {Me.grpData, Me.grpDesk, Me.grpAksi, Me.grpCari})
-
-        ' ---- grpData ----
-        Me.grpData.Text = "Data Kamar"
-        Me.grpData.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.grpData.ForeColor = System.Drawing.Color.FromArgb(30, 80, 160)
-        Me.grpData.Location = New System.Drawing.Point(10, 10)
-        Me.grpData.Size = New System.Drawing.Size(255, 240)
-        Me.grpData.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblNomor, Me.txtNomor, Me.lblTipe, Me.cmbTipe, Me.lblHarga, Me.txtHarga, Me.lblStatus, Me.cmbStatus})
-
-        Me.lblNomor.AutoSize = True
-        Me.lblNomor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblNomor.Location = New System.Drawing.Point(10, 22)
-        Me.lblNomor.Text = "Nomor Kamar"
-
-        Me.txtNomor.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.txtNomor.Location = New System.Drawing.Point(10, 40)
-        Me.txtNomor.Size = New System.Drawing.Size(230, 25)
-        Me.txtNomor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNomor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-
-        Me.lblTipe.AutoSize = True
-        Me.lblTipe.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblTipe.Location = New System.Drawing.Point(10, 77)
-        Me.lblTipe.Text = "Tipe Kamar (harga otomatis)"
-
-        Me.cmbTipe.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbTipe.Location = New System.Drawing.Point(10, 95)
-        Me.cmbTipe.Size = New System.Drawing.Size(230, 25)
-        Me.cmbTipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-
-        Me.lblHarga.AutoSize = True
-        Me.lblHarga.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblHarga.Location = New System.Drawing.Point(10, 132)
-        Me.lblHarga.Text = "Harga per Bulan (Rp)"
-
-        Me.txtHarga.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.txtHarga.Location = New System.Drawing.Point(10, 150)
-        Me.txtHarga.Size = New System.Drawing.Size(230, 25)
-        Me.txtHarga.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-
-        Me.lblStatus.AutoSize = True
-        Me.lblStatus.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblStatus.Location = New System.Drawing.Point(10, 187)
-        Me.lblStatus.Text = "Status Kamar"
-
-        Me.cmbStatus.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbStatus.Location = New System.Drawing.Point(10, 205)
-        Me.cmbStatus.Size = New System.Drawing.Size(230, 25)
-        Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-
-        ' ---- grpDesk ----
-        Me.grpDesk.Text = "Deskripsi"
-        Me.grpDesk.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.grpDesk.ForeColor = System.Drawing.Color.FromArgb(30, 80, 160)
-        Me.grpDesk.Location = New System.Drawing.Point(10, 258)
-        Me.grpDesk.Size = New System.Drawing.Size(255, 65)
-        Me.grpDesk.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblDeskripsi, Me.txtDeskripsi})
-
-        Me.lblDeskripsi.AutoSize = True
-        Me.lblDeskripsi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblDeskripsi.Location = New System.Drawing.Point(10, 18)
-
-        Me.txtDeskripsi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtDeskripsi.Location = New System.Drawing.Point(10, 25)
-        Me.txtDeskripsi.Size = New System.Drawing.Size(230, 23)
-        Me.txtDeskripsi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-
-        ' ---- grpAksi ----
-        Me.grpAksi.Text = "Aksi"
-        Me.grpAksi.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.grpAksi.ForeColor = System.Drawing.Color.FromArgb(30, 80, 160)
-        Me.grpAksi.Location = New System.Drawing.Point(10, 330)
-        Me.grpAksi.Size = New System.Drawing.Size(255, 120)
-        Me.grpAksi.Controls.AddRange(New System.Windows.Forms.Control() {Me.btnTambah, Me.btnUbah, Me.btnHapus, Me.btnBatal})
-
-        Me.btnTambah.BackColor = System.Drawing.Color.FromArgb(30, 80, 160)
-        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTambah.FlatAppearance.BorderSize = 0
-        Me.btnTambah.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnTambah.ForeColor = System.Drawing.Color.White
-        Me.btnTambah.Location = New System.Drawing.Point(10, 22)
-        Me.btnTambah.Size = New System.Drawing.Size(108, 35)
-        Me.btnTambah.Text = "➕  Tambah"
-        Me.btnTambah.Cursor = System.Windows.Forms.Cursors.Hand
-
-        Me.btnUbah.BackColor = System.Drawing.Color.FromArgb(180, 120, 0)
-        Me.btnUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUbah.FlatAppearance.BorderSize = 0
-        Me.btnUbah.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnUbah.ForeColor = System.Drawing.Color.White
-        Me.btnUbah.Location = New System.Drawing.Point(130, 22)
-        Me.btnUbah.Size = New System.Drawing.Size(108, 35)
-        Me.btnUbah.Text = "✏️  Ubah"
-        Me.btnUbah.Cursor = System.Windows.Forms.Cursors.Hand
-
-        Me.btnHapus.BackColor = System.Drawing.Color.FromArgb(180, 40, 40)
-        Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHapus.FlatAppearance.BorderSize = 0
-        Me.btnHapus.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnHapus.ForeColor = System.Drawing.Color.White
-        Me.btnHapus.Location = New System.Drawing.Point(10, 68)
-        Me.btnHapus.Size = New System.Drawing.Size(108, 35)
-        Me.btnHapus.Text = "🗑️  Hapus"
-        Me.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand
-
-        Me.btnBatal.BackColor = System.Drawing.Color.White
-        Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBatal.FlatAppearance.BorderColor = System.Drawing.Color.Gray
-        Me.btnBatal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnBatal.ForeColor = System.Drawing.Color.Gray
-        Me.btnBatal.Location = New System.Drawing.Point(130, 68)
-        Me.btnBatal.Size = New System.Drawing.Size(108, 35)
-        Me.btnBatal.Text = "✖  Batal"
-        Me.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand
-
-        ' ---- grpCari ----
-        Me.grpCari.Text = "Pencarian"
-        Me.grpCari.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.grpCari.ForeColor = System.Drawing.Color.FromArgb(30, 80, 160)
-        Me.grpCari.Location = New System.Drawing.Point(10, 460)
-        Me.grpCari.Size = New System.Drawing.Size(255, 65)
-        Me.grpCari.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblCari, Me.txtCari})
-
-        Me.lblCari.AutoSize = True
-        Me.lblCari.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblCari.Location = New System.Drawing.Point(10, 28)
-        Me.lblCari.Text = "Cari:"
-
-        Me.txtCari.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.txtCari.Location = New System.Drawing.Point(40, 25)
-        Me.txtCari.Size = New System.Drawing.Size(200, 25)
-        Me.txtCari.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-
-        ' ---- dgvKamar ----
-        Me.dgvKamar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvKamar.BackgroundColor = System.Drawing.Color.White
-        Me.dgvKamar.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvKamar.RowHeadersVisible = False
-        Me.dgvKamar.EnableHeadersVisualStyles = False
-        Me.dgvKamar.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(30, 80, 160)
-        Me.dgvKamar.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White
-        Me.dgvKamar.ColumnHeadersDefaultCellStyle.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.dgvKamar.DefaultCellStyle.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.dgvKamar.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(245, 248, 255)
-        Me.dgvKamar.GridColor = System.Drawing.Color.FromArgb(220, 228, 240)
-        Me.dgvKamar.Margin = New System.Windows.Forms.Padding(5)
-        Me.dgvKamar.Location = New System.Drawing.Point(280, 55)
-        Me.dgvKamar.Size = New System.Drawing.Size(620, 545)
-
-        ' ---- Form ----
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(900, 600)
-        Me.Controls.Add(Me.dgvKamar)
-        Me.Controls.Add(Me.pnlInput)
-        Me.Controls.Add(Me.pnlHeader)
-        Me.MinimumSize = New System.Drawing.Size(800, 550)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Manajemen Kamar - Sistem Kost"
-
-        Me.pnlHeader.ResumeLayout(False)
-        Me.pnlHeader.PerformLayout()
-        Me.pnlInput.ResumeLayout(False)
-        Me.grpData.ResumeLayout(False)
-        Me.grpData.PerformLayout()
-        Me.grpDesk.ResumeLayout(False)
-        Me.grpDesk.PerformLayout()
-        Me.grpAksi.ResumeLayout(False)
-        Me.grpCari.ResumeLayout(False)
-        Me.grpCari.PerformLayout()
-        CType(Me.dgvKamar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        pnlHeader = New Panel()
+        lblTitle = New Label()
+        btnTutup = New Button()
+        pnlInput = New Panel()
+        grpData = New GroupBox()
+        lblNomor = New Label()
+        txtNomor = New TextBox()
+        lblTipe = New Label()
+        cmbTipe = New ComboBox()
+        lblHarga = New Label()
+        txtHarga = New TextBox()
+        lblStatus = New Label()
+        cmbStatus = New ComboBox()
+        grpDesk = New GroupBox()
+        lblDeskripsi = New Label()
+        txtDeskripsi = New TextBox()
+        grpAksi = New GroupBox()
+        btnTambah = New Button()
+        btnUbah = New Button()
+        btnHapus = New Button()
+        btnBatal = New Button()
+        grpCari = New GroupBox()
+        lblCari = New Label()
+        txtCari = New TextBox()
+        dgvKamar = New DataGridView()
+        pnlHeader.SuspendLayout()
+        pnlInput.SuspendLayout()
+        grpData.SuspendLayout()
+        grpDesk.SuspendLayout()
+        grpAksi.SuspendLayout()
+        grpCari.SuspendLayout()
+        CType(dgvKamar, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' pnlHeader
+        ' 
+        pnlHeader.BackColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
+        pnlHeader.Controls.Add(lblTitle)
+        pnlHeader.Controls.Add(btnTutup)
+        pnlHeader.Dock = DockStyle.Top
+        pnlHeader.Location = New Point(0, 0)
+        pnlHeader.Margin = New Padding(3, 4, 3, 4)
+        pnlHeader.Name = "pnlHeader"
+        pnlHeader.Size = New Size(1029, 73)
+        pnlHeader.TabIndex = 0
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.AutoSize = True
+        lblTitle.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        lblTitle.ForeColor = Color.White
+        lblTitle.Location = New Point(17, 20)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(250, 30)
+        lblTitle.TabIndex = 0
+        lblTitle.Text = "🏠  Manajemen Kamar"
+        ' 
+        ' btnTutup
+        ' 
+        btnTutup.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnTutup.BackColor = Color.FromArgb(CByte(200), CByte(60), CByte(60))
+        btnTutup.Cursor = Cursors.Hand
+        btnTutup.FlatAppearance.BorderSize = 0
+        btnTutup.FlatStyle = FlatStyle.Flat
+        btnTutup.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnTutup.ForeColor = Color.White
+        btnTutup.Location = New Point(926, 17)
+        btnTutup.Margin = New Padding(3, 4, 3, 4)
+        btnTutup.Name = "btnTutup"
+        btnTutup.Size = New Size(80, 37)
+        btnTutup.TabIndex = 1
+        btnTutup.Text = "✕  Tutup"
+        btnTutup.UseVisualStyleBackColor = False
+        ' 
+        ' pnlInput
+        ' 
+        pnlInput.BackColor = Color.White
+        pnlInput.Controls.Add(grpData)
+        pnlInput.Controls.Add(grpDesk)
+        pnlInput.Controls.Add(grpAksi)
+        pnlInput.Controls.Add(grpCari)
+        pnlInput.Dock = DockStyle.Left
+        pnlInput.Location = New Point(0, 73)
+        pnlInput.Margin = New Padding(3, 4, 3, 4)
+        pnlInput.Name = "pnlInput"
+        pnlInput.Padding = New Padding(11, 13, 11, 13)
+        pnlInput.Size = New Size(320, 727)
+        pnlInput.TabIndex = 1
+        ' 
+        ' grpData
+        ' 
+        grpData.Controls.Add(lblNomor)
+        grpData.Controls.Add(txtNomor)
+        grpData.Controls.Add(lblTipe)
+        grpData.Controls.Add(cmbTipe)
+        grpData.Controls.Add(lblHarga)
+        grpData.Controls.Add(txtHarga)
+        grpData.Controls.Add(lblStatus)
+        grpData.Controls.Add(cmbStatus)
+        grpData.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        grpData.ForeColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
+        grpData.Location = New Point(11, 13)
+        grpData.Margin = New Padding(3, 4, 3, 4)
+        grpData.Name = "grpData"
+        grpData.Padding = New Padding(3, 4, 3, 4)
+        grpData.Size = New Size(291, 320)
+        grpData.TabIndex = 0
+        grpData.TabStop = False
+        grpData.Text = "Data Kamar"
+        ' 
+        ' lblNomor
+        ' 
+        lblNomor.AutoSize = True
+        lblNomor.Font = New Font("Segoe UI", 9F)
+        lblNomor.Location = New Point(11, 29)
+        lblNomor.Name = "lblNomor"
+        lblNomor.Size = New Size(103, 20)
+        lblNomor.TabIndex = 0
+        lblNomor.Text = "Nomor Kamar"
+        ' 
+        ' txtNomor
+        ' 
+        txtNomor.BorderStyle = BorderStyle.FixedSingle
+        txtNomor.CharacterCasing = CharacterCasing.Upper
+        txtNomor.Font = New Font("Segoe UI", 10F)
+        txtNomor.Location = New Point(11, 53)
+        txtNomor.Margin = New Padding(3, 4, 3, 4)
+        txtNomor.Name = "txtNomor"
+        txtNomor.Size = New Size(263, 30)
+        txtNomor.TabIndex = 1
+        ' 
+        ' lblTipe
+        ' 
+        lblTipe.AutoSize = True
+        lblTipe.Font = New Font("Segoe UI", 9F)
+        lblTipe.Location = New Point(11, 103)
+        lblTipe.Name = "lblTipe"
+        lblTipe.Size = New Size(200, 20)
+        lblTipe.TabIndex = 2
+        lblTipe.Text = "Tipe Kamar (harga otomatis)"
+        ' 
+        ' cmbTipe
+        ' 
+        cmbTipe.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbTipe.Font = New Font("Segoe UI", 10F)
+        cmbTipe.Location = New Point(11, 127)
+        cmbTipe.Margin = New Padding(3, 4, 3, 4)
+        cmbTipe.Name = "cmbTipe"
+        cmbTipe.Size = New Size(262, 31)
+        cmbTipe.TabIndex = 3
+        ' 
+        ' lblHarga
+        ' 
+        lblHarga.AutoSize = True
+        lblHarga.Font = New Font("Segoe UI", 9F)
+        lblHarga.Location = New Point(11, 176)
+        lblHarga.Name = "lblHarga"
+        lblHarga.Size = New Size(149, 20)
+        lblHarga.TabIndex = 4
+        lblHarga.Text = "Harga per Bulan (Rp)"
+        ' 
+        ' txtHarga
+        ' 
+        txtHarga.BorderStyle = BorderStyle.FixedSingle
+        txtHarga.Font = New Font("Segoe UI", 10F)
+        txtHarga.Location = New Point(11, 200)
+        txtHarga.Margin = New Padding(3, 4, 3, 4)
+        txtHarga.Name = "txtHarga"
+        txtHarga.Size = New Size(263, 30)
+        txtHarga.TabIndex = 5
+        ' 
+        ' lblStatus
+        ' 
+        lblStatus.AutoSize = True
+        lblStatus.Font = New Font("Segoe UI", 9F)
+        lblStatus.Location = New Point(11, 249)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(96, 20)
+        lblStatus.TabIndex = 6
+        lblStatus.Text = "Status Kamar"
+        ' 
+        ' cmbStatus
+        ' 
+        cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbStatus.Font = New Font("Segoe UI", 10F)
+        cmbStatus.Location = New Point(11, 273)
+        cmbStatus.Margin = New Padding(3, 4, 3, 4)
+        cmbStatus.Name = "cmbStatus"
+        cmbStatus.Size = New Size(262, 31)
+        cmbStatus.TabIndex = 7
+        ' 
+        ' grpDesk
+        ' 
+        grpDesk.Controls.Add(lblDeskripsi)
+        grpDesk.Controls.Add(txtDeskripsi)
+        grpDesk.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        grpDesk.ForeColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
+        grpDesk.Location = New Point(11, 344)
+        grpDesk.Margin = New Padding(3, 4, 3, 4)
+        grpDesk.Name = "grpDesk"
+        grpDesk.Padding = New Padding(3, 4, 3, 4)
+        grpDesk.Size = New Size(291, 87)
+        grpDesk.TabIndex = 1
+        grpDesk.TabStop = False
+        grpDesk.Text = "Deskripsi"
+        ' 
+        ' lblDeskripsi
+        ' 
+        lblDeskripsi.AutoSize = True
+        lblDeskripsi.Font = New Font("Segoe UI", 9F)
+        lblDeskripsi.Location = New Point(11, 24)
+        lblDeskripsi.Name = "lblDeskripsi"
+        lblDeskripsi.Size = New Size(0, 20)
+        lblDeskripsi.TabIndex = 0
+        ' 
+        ' txtDeskripsi
+        ' 
+        txtDeskripsi.BorderStyle = BorderStyle.FixedSingle
+        txtDeskripsi.Font = New Font("Segoe UI", 9F)
+        txtDeskripsi.Location = New Point(11, 33)
+        txtDeskripsi.Margin = New Padding(3, 4, 3, 4)
+        txtDeskripsi.Name = "txtDeskripsi"
+        txtDeskripsi.Size = New Size(263, 27)
+        txtDeskripsi.TabIndex = 1
+        ' 
+        ' grpAksi
+        ' 
+        grpAksi.Controls.Add(btnTambah)
+        grpAksi.Controls.Add(btnUbah)
+        grpAksi.Controls.Add(btnHapus)
+        grpAksi.Controls.Add(btnBatal)
+        grpAksi.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        grpAksi.ForeColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
+        grpAksi.Location = New Point(11, 440)
+        grpAksi.Margin = New Padding(3, 4, 3, 4)
+        grpAksi.Name = "grpAksi"
+        grpAksi.Padding = New Padding(3, 4, 3, 4)
+        grpAksi.Size = New Size(291, 160)
+        grpAksi.TabIndex = 2
+        grpAksi.TabStop = False
+        grpAksi.Text = "Aksi"
+        ' 
+        ' btnTambah
+        ' 
+        btnTambah.BackColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
+        btnTambah.Cursor = Cursors.Hand
+        btnTambah.FlatAppearance.BorderSize = 0
+        btnTambah.FlatStyle = FlatStyle.Flat
+        btnTambah.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnTambah.ForeColor = Color.White
+        btnTambah.Location = New Point(11, 29)
+        btnTambah.Margin = New Padding(3, 4, 3, 4)
+        btnTambah.Name = "btnTambah"
+        btnTambah.Size = New Size(123, 47)
+        btnTambah.TabIndex = 0
+        btnTambah.Text = "➕  Tambah"
+        btnTambah.UseVisualStyleBackColor = False
+        ' 
+        ' btnUbah
+        ' 
+        btnUbah.BackColor = Color.FromArgb(CByte(180), CByte(120), CByte(0))
+        btnUbah.Cursor = Cursors.Hand
+        btnUbah.FlatAppearance.BorderSize = 0
+        btnUbah.FlatStyle = FlatStyle.Flat
+        btnUbah.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnUbah.ForeColor = Color.White
+        btnUbah.Location = New Point(149, 29)
+        btnUbah.Margin = New Padding(3, 4, 3, 4)
+        btnUbah.Name = "btnUbah"
+        btnUbah.Size = New Size(123, 47)
+        btnUbah.TabIndex = 1
+        btnUbah.Text = "✏️  Ubah"
+        btnUbah.UseVisualStyleBackColor = False
+        ' 
+        ' btnHapus
+        ' 
+        btnHapus.BackColor = Color.FromArgb(CByte(180), CByte(40), CByte(40))
+        btnHapus.Cursor = Cursors.Hand
+        btnHapus.FlatAppearance.BorderSize = 0
+        btnHapus.FlatStyle = FlatStyle.Flat
+        btnHapus.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnHapus.ForeColor = Color.White
+        btnHapus.Location = New Point(11, 91)
+        btnHapus.Margin = New Padding(3, 4, 3, 4)
+        btnHapus.Name = "btnHapus"
+        btnHapus.Size = New Size(123, 47)
+        btnHapus.TabIndex = 2
+        btnHapus.Text = "🗑️  Hapus"
+        btnHapus.UseVisualStyleBackColor = False
+        ' 
+        ' btnBatal
+        ' 
+        btnBatal.BackColor = Color.White
+        btnBatal.Cursor = Cursors.Hand
+        btnBatal.FlatAppearance.BorderColor = Color.Gray
+        btnBatal.FlatStyle = FlatStyle.Flat
+        btnBatal.Font = New Font("Segoe UI", 9F)
+        btnBatal.ForeColor = Color.Gray
+        btnBatal.Location = New Point(149, 91)
+        btnBatal.Margin = New Padding(3, 4, 3, 4)
+        btnBatal.Name = "btnBatal"
+        btnBatal.Size = New Size(123, 47)
+        btnBatal.TabIndex = 3
+        btnBatal.Text = "✖  Batal"
+        btnBatal.UseVisualStyleBackColor = False
+        ' 
+        ' grpCari
+        ' 
+        grpCari.Controls.Add(lblCari)
+        grpCari.Controls.Add(txtCari)
+        grpCari.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        grpCari.ForeColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
+        grpCari.Location = New Point(11, 613)
+        grpCari.Margin = New Padding(3, 4, 3, 4)
+        grpCari.Name = "grpCari"
+        grpCari.Padding = New Padding(3, 4, 3, 4)
+        grpCari.Size = New Size(291, 87)
+        grpCari.TabIndex = 3
+        grpCari.TabStop = False
+        grpCari.Text = "Pencarian"
+        ' 
+        ' lblCari
+        ' 
+        lblCari.AutoSize = True
+        lblCari.Font = New Font("Segoe UI", 9F)
+        lblCari.Location = New Point(11, 37)
+        lblCari.Name = "lblCari"
+        lblCari.Size = New Size(38, 20)
+        lblCari.TabIndex = 0
+        lblCari.Text = "Cari:"
+        ' 
+        ' txtCari
+        ' 
+        txtCari.BorderStyle = BorderStyle.FixedSingle
+        txtCari.Font = New Font("Segoe UI", 10F)
+        txtCari.Location = New Point(55, 33)
+        txtCari.Margin = New Padding(3, 4, 3, 4)
+        txtCari.Name = "txtCari"
+        txtCari.Size = New Size(219, 30)
+        txtCari.TabIndex = 1
+        ' 
+        ' dgvKamar
+        ' 
+        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(245), CByte(248), CByte(255))
+        dgvKamar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        dgvKamar.BackgroundColor = Color.White
+        dgvKamar.BorderStyle = BorderStyle.None
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(30), CByte(80), CByte(160))
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvKamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgvKamar.ColumnHeadersHeight = 29
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Window
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle3.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        dgvKamar.DefaultCellStyle = DataGridViewCellStyle3
+        dgvKamar.Dock = DockStyle.Fill
+        dgvKamar.EnableHeadersVisualStyles = False
+        dgvKamar.GridColor = Color.FromArgb(CByte(220), CByte(228), CByte(240))
+        dgvKamar.Location = New Point(320, 73)
+        dgvKamar.Margin = New Padding(6, 7, 6, 7)
+        dgvKamar.Name = "dgvKamar"
+        dgvKamar.RowHeadersVisible = False
+        dgvKamar.RowHeadersWidth = 51
+        dgvKamar.Size = New Size(709, 727)
+        dgvKamar.TabIndex = 0
+        ' 
+        ' FormKamar
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(1029, 800)
+        Controls.Add(dgvKamar)
+        Controls.Add(pnlInput)
+        Controls.Add(pnlHeader)
+        Margin = New Padding(3, 4, 3, 4)
+        MinimumSize = New Size(912, 718)
+        Name = "FormKamar"
+        StartPosition = FormStartPosition.CenterParent
+        Text = "Manajemen Kamar - Sistem Kost"
+        pnlHeader.ResumeLayout(False)
+        pnlHeader.PerformLayout()
+        pnlInput.ResumeLayout(False)
+        grpData.ResumeLayout(False)
+        grpData.PerformLayout()
+        grpDesk.ResumeLayout(False)
+        grpDesk.PerformLayout()
+        grpAksi.ResumeLayout(False)
+        grpCari.ResumeLayout(False)
+        grpCari.PerformLayout()
+        CType(dgvKamar, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
     End Sub
 
     Friend WithEvents pnlHeader As System.Windows.Forms.Panel

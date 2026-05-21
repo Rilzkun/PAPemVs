@@ -3,7 +3,7 @@ Partial Class FormDashboardUser
     Inherits System.Windows.Forms.Form
 
     <System.Diagnostics.DebuggerNonUserCode()>
-    Protected Overrides Sub Dispose(disposing As Boolean)
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
                 components.Dispose()
@@ -26,7 +26,6 @@ Partial Class FormDashboardUser
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.lblRoleInfo = New System.Windows.Forms.Label()
-        Me.btnRefresh = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.pnlNav = New System.Windows.Forms.Panel()
         Me.btnPesan = New System.Windows.Forms.Button()
@@ -43,9 +42,12 @@ Partial Class FormDashboardUser
         Me.lblTglSelesai = New System.Windows.Forms.Label()
         Me.lblDeskripsi = New System.Windows.Forms.Label()
         Me.lblStatus = New System.Windows.Forms.Label()
+        Me.btnCetak = New System.Windows.Forms.Button()
         Me.pnlTidakAdaPesan = New System.Windows.Forms.Panel()
         Me.lblTidakAda = New System.Windows.Forms.Label()
         Me.lblSaran = New System.Windows.Forms.Label()
+        Me.docPrint = New System.Drawing.Printing.PrintDocument()
+        Me.dialogPrint = New System.Windows.Forms.PrintPreviewDialog()
 
         Me.MainMenu.SuspendLayout()
         Me.pnlHeader.SuspendLayout()
@@ -60,11 +62,9 @@ Partial Class FormDashboardUser
         Me.MainMenu.ForeColor = System.Drawing.Color.White
         Me.MainMenu.Items.Add(Me.mnuData)
         Me.MainMenu.Dock = System.Windows.Forms.DockStyle.Top
-
         Me.mnuData.Text = "≡  Menu"
         Me.mnuData.ForeColor = System.Drawing.Color.White
         Me.mnuData.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuPesan, Me.mnuKelola, mnuSep, Me.mnuLogout})
-
         Me.mnuPesan.Text = "📋  Pesan Kamar Baru"
         Me.mnuKelola.Text = "📁  Kelola Pesanan Saya"
         Me.mnuLogout.Text = "🚪  Logout"
@@ -74,7 +74,7 @@ Partial Class FormDashboardUser
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(40, 100, 180)
         Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlHeader.Height = 70
-        Me.pnlHeader.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblWelcome, Me.lblRoleInfo, Me.btnRefresh, Me.btnLogout})
+        Me.pnlHeader.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblWelcome, Me.lblRoleInfo, Me.btnLogout})
 
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold)
@@ -87,17 +87,6 @@ Partial Class FormDashboardUser
         Me.lblRoleInfo.ForeColor = System.Drawing.Color.FromArgb(200, 225, 255)
         Me.lblRoleInfo.Location = New System.Drawing.Point(17, 38)
         Me.lblRoleInfo.Text = "👤  Role: Penghuni / User"
-
-        Me.btnRefresh.BackColor = System.Drawing.Color.FromArgb(60, 120, 200)
-        Me.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRefresh.FlatAppearance.BorderSize = 0
-        Me.btnRefresh.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnRefresh.ForeColor = System.Drawing.Color.White
-        Me.btnRefresh.Location = New System.Drawing.Point(500, 20)
-        Me.btnRefresh.Size = New System.Drawing.Size(90, 30)
-        Me.btnRefresh.Text = "🔄  Refresh"
-        Me.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right
 
         Me.btnLogout.BackColor = System.Drawing.Color.FromArgb(200, 60, 60)
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -146,7 +135,7 @@ Partial Class FormDashboardUser
         ' ---- pnlKamarInfo ----
         Me.pnlKamarInfo.BackColor = System.Drawing.Color.White
         Me.pnlKamarInfo.Location = New System.Drawing.Point(20, 20)
-        Me.pnlKamarInfo.Size = New System.Drawing.Size(580, 380)
+        Me.pnlKamarInfo.Size = New System.Drawing.Size(580, 420)
         Me.pnlKamarInfo.Padding = New System.Windows.Forms.Padding(20)
 
         Me.lblKamarTitle.AutoSize = True
@@ -156,149 +145,53 @@ Partial Class FormDashboardUser
         Me.lblKamarTitle.Text = "🏠  Kamar Yang Sedang Disewa"
         Me.pnlKamarInfo.Controls.Add(Me.lblKamarTitle)
 
-        ' ROW 0: Nomor Kamar
         Dim lblKey0 As New System.Windows.Forms.Label()
-        lblKey0.AutoSize = True
-        lblKey0.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        lblKey0.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80)
-        lblKey0.Location = New System.Drawing.Point(20, 60)
-        lblKey0.Text = "Nomor Kamar:"
-        Me.pnlKamarInfo.Controls.Add(lblKey0)
+        lblKey0.AutoSize = True : lblKey0.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey0.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey0.Location = New System.Drawing.Point(20, 60) : lblKey0.Text = "Nomor Kamar:" : Me.pnlKamarInfo.Controls.Add(lblKey0)
+        Me.lblNoKamar.AutoSize = True : Me.lblNoKamar.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblNoKamar.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblNoKamar.Location = New System.Drawing.Point(170, 60) : Me.lblNoKamar.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblNoKamar)
 
-        Me.lblNoKamar.AutoSize = True
-        Me.lblNoKamar.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblNoKamar.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30)
-        Me.lblNoKamar.Location = New System.Drawing.Point(170, 60)
-        Me.lblNoKamar.Text = "-"
-        Me.pnlKamarInfo.Controls.Add(Me.lblNoKamar)
-
-        ' ROW 1: Tipe Kamar
         Dim lblKey1 As New System.Windows.Forms.Label()
-        lblKey1.AutoSize = True
-        lblKey1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        lblKey1.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80)
-        lblKey1.Location = New System.Drawing.Point(20, 93)
-        lblKey1.Text = "Tipe Kamar:"
-        Me.pnlKamarInfo.Controls.Add(lblKey1)
+        lblKey1.AutoSize = True : lblKey1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey1.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey1.Location = New System.Drawing.Point(20, 93) : lblKey1.Text = "Tipe Kamar:" : Me.pnlKamarInfo.Controls.Add(lblKey1)
+        Me.lblTipeKamar.AutoSize = True : Me.lblTipeKamar.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblTipeKamar.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblTipeKamar.Location = New System.Drawing.Point(170, 93) : Me.lblTipeKamar.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblTipeKamar)
 
-        Me.lblTipeKamar.AutoSize = True
-        Me.lblTipeKamar.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblTipeKamar.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30)
-        Me.lblTipeKamar.Location = New System.Drawing.Point(170, 93)
-        Me.lblTipeKamar.Text = "-"
-        Me.pnlKamarInfo.Controls.Add(Me.lblTipeKamar)
-
-        ' ROW 2: Harga/Bulan
         Dim lblKey2 As New System.Windows.Forms.Label()
-        lblKey2.AutoSize = True
-        lblKey2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        lblKey2.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80)
-        lblKey2.Location = New System.Drawing.Point(20, 126)
-        lblKey2.Text = "Harga/Bulan:"
-        Me.pnlKamarInfo.Controls.Add(lblKey2)
+        lblKey2.AutoSize = True : lblKey2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey2.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey2.Location = New System.Drawing.Point(20, 126) : lblKey2.Text = "Harga/Bulan:" : Me.pnlKamarInfo.Controls.Add(lblKey2)
+        Me.lblHarga.AutoSize = True : Me.lblHarga.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblHarga.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblHarga.Location = New System.Drawing.Point(170, 126) : Me.lblHarga.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblHarga)
 
-        Me.lblHarga.AutoSize = True
-        Me.lblHarga.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblHarga.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30)
-        Me.lblHarga.Location = New System.Drawing.Point(170, 126)
-        Me.lblHarga.Text = "-"
-        Me.pnlKamarInfo.Controls.Add(Me.lblHarga)
-
-        ' ROW 3: Durasi Sewa
         Dim lblKey3 As New System.Windows.Forms.Label()
-        lblKey3.AutoSize = True
-        lblKey3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        lblKey3.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80)
-        lblKey3.Location = New System.Drawing.Point(20, 159)
-        lblKey3.Text = "Durasi Sewa:"
-        Me.pnlKamarInfo.Controls.Add(lblKey3)
+        lblKey3.AutoSize = True : lblKey3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey3.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey3.Location = New System.Drawing.Point(20, 159) : lblKey3.Text = "Durasi Sewa:" : Me.pnlKamarInfo.Controls.Add(lblKey3)
+        Me.lblDurasi.AutoSize = True : Me.lblDurasi.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblDurasi.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblDurasi.Location = New System.Drawing.Point(170, 159) : Me.lblDurasi.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblDurasi)
 
-        Me.lblDurasi.AutoSize = True
-        Me.lblDurasi.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblDurasi.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30)
-        Me.lblDurasi.Location = New System.Drawing.Point(170, 159)
-        Me.lblDurasi.Text = "-"
-        Me.pnlKamarInfo.Controls.Add(Me.lblDurasi)
-
-        ' ROW 4: Total Harga
         Dim lblKey4 As New System.Windows.Forms.Label()
-        lblKey4.AutoSize = True
-        lblKey4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        lblKey4.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80)
-        lblKey4.Location = New System.Drawing.Point(20, 192)
-        lblKey4.Text = "Total Harga:"
-        Me.pnlKamarInfo.Controls.Add(lblKey4)
+        lblKey4.AutoSize = True : lblKey4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey4.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey4.Location = New System.Drawing.Point(20, 192) : lblKey4.Text = "Total Harga:" : Me.pnlKamarInfo.Controls.Add(lblKey4)
+        Me.lblTotal.AutoSize = True : Me.lblTotal.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblTotal.Location = New System.Drawing.Point(170, 192) : Me.lblTotal.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblTotal)
 
-        Me.lblTotal.AutoSize = True
-        Me.lblTotal.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30)
-        Me.lblTotal.Location = New System.Drawing.Point(170, 192)
-        Me.lblTotal.Text = "-"
-        Me.pnlKamarInfo.Controls.Add(Me.lblTotal)
-
-        ' ROW 5: Tanggal Mulai
         Dim lblKey5 As New System.Windows.Forms.Label()
-        lblKey5.AutoSize = True
-        lblKey5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        lblKey5.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80)
-        lblKey5.Location = New System.Drawing.Point(20, 225)
-        lblKey5.Text = "Tanggal Mulai:"
-        Me.pnlKamarInfo.Controls.Add(lblKey5)
+        lblKey5.AutoSize = True : lblKey5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey5.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey5.Location = New System.Drawing.Point(20, 225) : lblKey5.Text = "Tanggal Mulai:" : Me.pnlKamarInfo.Controls.Add(lblKey5)
+        Me.lblTglMulai.AutoSize = True : Me.lblTglMulai.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblTglMulai.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblTglMulai.Location = New System.Drawing.Point(170, 225) : Me.lblTglMulai.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblTglMulai)
 
-        Me.lblTglMulai.AutoSize = True
-        Me.lblTglMulai.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblTglMulai.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30)
-        Me.lblTglMulai.Location = New System.Drawing.Point(170, 225)
-        Me.lblTglMulai.Text = "-"
-        Me.pnlKamarInfo.Controls.Add(Me.lblTglMulai)
-
-        ' ROW 6: Tanggal Selesai
         Dim lblKey6 As New System.Windows.Forms.Label()
-        lblKey6.AutoSize = True
-        lblKey6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        lblKey6.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80)
-        lblKey6.Location = New System.Drawing.Point(20, 258)
-        lblKey6.Text = "Tanggal Selesai:"
-        Me.pnlKamarInfo.Controls.Add(lblKey6)
+        lblKey6.AutoSize = True : lblKey6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey6.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey6.Location = New System.Drawing.Point(20, 258) : lblKey6.Text = "Tanggal Selesai:" : Me.pnlKamarInfo.Controls.Add(lblKey6)
+        Me.lblTglSelesai.AutoSize = True : Me.lblTglSelesai.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblTglSelesai.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblTglSelesai.Location = New System.Drawing.Point(170, 258) : Me.lblTglSelesai.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblTglSelesai)
 
-        Me.lblTglSelesai.AutoSize = True
-        Me.lblTglSelesai.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblTglSelesai.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30)
-        Me.lblTglSelesai.Location = New System.Drawing.Point(170, 258)
-        Me.lblTglSelesai.Text = "-"
-        Me.pnlKamarInfo.Controls.Add(Me.lblTglSelesai)
-
-        ' ROW 7: Deskripsi
         Dim lblKey7 As New System.Windows.Forms.Label()
-        lblKey7.AutoSize = True
-        lblKey7.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        lblKey7.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80)
-        lblKey7.Location = New System.Drawing.Point(20, 291)
-        lblKey7.Text = "Deskripsi:"
-        Me.pnlKamarInfo.Controls.Add(lblKey7)
+        lblKey7.AutoSize = True : lblKey7.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey7.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey7.Location = New System.Drawing.Point(20, 291) : lblKey7.Text = "Deskripsi:" : Me.pnlKamarInfo.Controls.Add(lblKey7)
+        Me.lblDeskripsi.AutoSize = True : Me.lblDeskripsi.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblDeskripsi.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30) : Me.lblDeskripsi.Location = New System.Drawing.Point(170, 291) : Me.lblDeskripsi.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblDeskripsi)
 
-        Me.lblDeskripsi.AutoSize = True
-        Me.lblDeskripsi.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblDeskripsi.ForeColor = System.Drawing.Color.FromArgb(30, 30, 30)
-        Me.lblDeskripsi.Location = New System.Drawing.Point(170, 291)
-        Me.lblDeskripsi.Text = "-"
-        Me.pnlKamarInfo.Controls.Add(Me.lblDeskripsi)
-
-        ' ROW 8: Status
         Dim lblKey8 As New System.Windows.Forms.Label()
-        lblKey8.AutoSize = True
-        lblKey8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        lblKey8.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80)
-        lblKey8.Location = New System.Drawing.Point(20, 324)
-        lblKey8.Text = "Status:"
-        Me.pnlKamarInfo.Controls.Add(lblKey8)
+        lblKey8.AutoSize = True : lblKey8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold) : lblKey8.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80) : lblKey8.Location = New System.Drawing.Point(20, 324) : lblKey8.Text = "Status:" : Me.pnlKamarInfo.Controls.Add(lblKey8)
+        Me.lblStatus.AutoSize = True : Me.lblStatus.Font = New System.Drawing.Font("Segoe UI", 10.0!) : Me.lblStatus.ForeColor = System.Drawing.Color.FromArgb(40, 160, 80) : Me.lblStatus.Location = New System.Drawing.Point(170, 324) : Me.lblStatus.Text = "-" : Me.pnlKamarInfo.Controls.Add(Me.lblStatus)
 
-        Me.lblStatus.AutoSize = True
-        Me.lblStatus.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblStatus.ForeColor = System.Drawing.Color.FromArgb(40, 160, 80) ' Warna khusus baris ini
-        Me.lblStatus.Location = New System.Drawing.Point(170, 324)
-        Me.lblStatus.Text = "-"
-        Me.pnlKamarInfo.Controls.Add(Me.lblStatus)
+        ' Tombol Cetak Struk
+        Me.btnCetak.BackColor = System.Drawing.Color.FromArgb(40, 160, 80)
+        Me.btnCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCetak.FlatAppearance.BorderSize = 0
+        Me.btnCetak.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.btnCetak.ForeColor = System.Drawing.Color.White
+        Me.btnCetak.Location = New System.Drawing.Point(24, 365)
+        Me.btnCetak.Size = New System.Drawing.Size(160, 35)
+        Me.btnCetak.Text = "🖨️ Cetak Struk"
+        Me.btnCetak.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlKamarInfo.Controls.Add(Me.btnCetak)
 
         ' ---- pnlTidakAdaPesan ----
         Me.pnlTidakAdaPesan.BackColor = System.Drawing.Color.White
@@ -317,7 +210,6 @@ Partial Class FormDashboardUser
         Me.lblSaran.ForeColor = System.Drawing.Color.FromArgb(120, 120, 120)
         Me.lblSaran.Location = New System.Drawing.Point(20, 75)
         Me.lblSaran.Text = "Klik tombol 'Pesan Kamar' untuk menyewa kamar."
-
         Me.pnlTidakAdaPesan.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblTidakAda, Me.lblSaran})
 
         ' ---- Form ----
@@ -353,7 +245,6 @@ Partial Class FormDashboardUser
     Friend WithEvents pnlHeader As System.Windows.Forms.Panel
     Friend WithEvents lblWelcome As System.Windows.Forms.Label
     Friend WithEvents lblRoleInfo As System.Windows.Forms.Label
-    Friend WithEvents btnRefresh As System.Windows.Forms.Button
     Friend WithEvents btnLogout As System.Windows.Forms.Button
     Friend WithEvents pnlNav As System.Windows.Forms.Panel
     Friend WithEvents btnPesan As System.Windows.Forms.Button
@@ -370,8 +261,12 @@ Partial Class FormDashboardUser
     Friend WithEvents lblTglSelesai As System.Windows.Forms.Label
     Friend WithEvents lblDeskripsi As System.Windows.Forms.Label
     Friend WithEvents lblStatus As System.Windows.Forms.Label
+    Friend WithEvents btnCetak As System.Windows.Forms.Button
     Friend WithEvents pnlTidakAdaPesan As System.Windows.Forms.Panel
     Friend WithEvents lblTidakAda As System.Windows.Forms.Label
     Friend WithEvents lblSaran As System.Windows.Forms.Label
+
+    Friend WithEvents docPrint As System.Drawing.Printing.PrintDocument
+    Friend WithEvents dialogPrint As System.Windows.Forms.PrintPreviewDialog
 
 End Class

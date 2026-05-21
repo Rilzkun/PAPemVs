@@ -1,8 +1,9 @@
 ﻿Imports System.Data
+Imports System.Drawing.Printing
 
 Public Class FormDashboardUser
 
-    ' ---- Event Load (Saat Form Terbuka) ----
+    ' ---- Event Load ----
     Private Sub FormDashboardUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblWelcome.Text = "Halo, " & SessionModule.NamaLengkap & "!"
         MuatInfoKamar()
@@ -10,7 +11,6 @@ Public Class FormDashboardUser
 
     ' ---- Pengaturan Layout Responsif ----
     Private Sub FormDashboardUser_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
-        ' Membuat panel konten selalu berada di posisi tengah atas saat form diubah ukurannya
         If pnlContent IsNot Nothing Then
             If pnlKamarInfo.Visible Then
                 pnlKamarInfo.Location = New Point((pnlContent.Width - pnlKamarInfo.Width) \ 2, 20)
@@ -26,12 +26,10 @@ Public Class FormDashboardUser
         Dim dt As DataTable = GetPemesananAktifByUser(SessionModule.IdUser)
 
         If dt.Rows.Count = 0 Then
-            ' Jika tidak punya pesanan aktif
             pnlKamarInfo.Visible = False
             pnlTidakAdaPesan.Visible = True
             pnlTidakAdaPesan.Location = New Point((pnlContent.Width - pnlTidakAdaPesan.Width) \ 2, 20)
         Else
-            ' Jika ada pesanan aktif, tampilkan detailnya
             pnlKamarInfo.Visible = True
             pnlTidakAdaPesan.Visible = False
             pnlKamarInfo.Location = New Point((pnlContent.Width - pnlKamarInfo.Width) \ 2, 20)
@@ -57,7 +55,6 @@ Public Class FormDashboardUser
             Return
         End If
 
-        ' Buka form pemesanan dan refresh setelah form ditutup
         Dim frm As New FormPemesanan()
         frm.ShowDialog(Me)
         MuatInfoKamar()
@@ -70,9 +67,60 @@ Public Class FormDashboardUser
         MuatInfoKamar()
     End Sub
 
-    ' ---- Tombol Aksi: Refresh ----
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
-        MuatInfoKamar()
+    ' ---- Tombol Aksi: Cetak Struk ----
+    Private Sub btnCetak_Click(sender As Object, e As EventArgs) Handles btnCetak.Click
+        dialogPrint.Document = docPrint
+        dialogPrint.StartPosition = FormStartPosition.CenterScreen
+        dialogPrint.WindowState = FormWindowState.Normal
+        dialogPrint.Width = 600
+        dialogPrint.Height = 700
+        dialogPrint.ShowDialog()
+    End Sub
+
+    ' ---- Logika Menggambar Struk (Modul 7) ----
+    Private Sub docPrint_PrintPage(sender As Object, e As PrintPageEventArgs) Handles docPrint.PrintPage
+        Dim fontJudul As New Font("Courier New", 16, FontStyle.Bold)
+        Dim fontSub As New Font("Courier New", 11, FontStyle.Regular)
+        Dim fontIsi As New Font("Courier New", 10, FontStyle.Regular)
+        Dim fontTebal As New Font("Courier New", 10, FontStyle.Bold)
+        Dim brush As Brush = Brushes.Black
+
+        Dim marginKiri As Integer = 50
+        Dim yPos As Integer = 50
+
+        e.Graphics.DrawString("STRUK PEMESANAN KOST", fontJudul, brush, marginKiri, yPos)
+        yPos += 30
+        e.Graphics.DrawString("Tanda Bukti Sewa Kamar Resmi", fontSub, brush, marginKiri, yPos)
+        yPos += 30
+        e.Graphics.DrawString("------------------------------------------------", fontIsi, brush, marginKiri, yPos)
+        yPos += 20
+
+        e.Graphics.DrawString("Nama Penyewa : " & SessionModule.NamaLengkap, fontIsi, brush, marginKiri, yPos)
+        yPos += 25
+        e.Graphics.DrawString("Nomor Kamar  : " & lblNoKamar.Text, fontIsi, brush, marginKiri, yPos)
+        yPos += 25
+        e.Graphics.DrawString("Tipe Kamar   : " & lblTipeKamar.Text, fontIsi, brush, marginKiri, yPos)
+        yPos += 25
+        e.Graphics.DrawString("Durasi Sewa  : " & lblDurasi.Text, fontIsi, brush, marginKiri, yPos)
+        yPos += 25
+        e.Graphics.DrawString("Tanggal Masuk: " & lblTglMulai.Text, fontIsi, brush, marginKiri, yPos)
+        yPos += 25
+        e.Graphics.DrawString("Tgl Selesai  : " & lblTglSelesai.Text, fontIsi, brush, marginKiri, yPos)
+        yPos += 30
+
+        e.Graphics.DrawString("------------------------------------------------", fontIsi, brush, marginKiri, yPos)
+        yPos += 20
+
+        e.Graphics.DrawString("TOTAL BAYAR  : " & lblTotal.Text, fontTebal, brush, marginKiri, yPos)
+        yPos += 30
+        e.Graphics.DrawString("------------------------------------------------", fontIsi, brush, marginKiri, yPos)
+        yPos += 40
+
+        e.Graphics.DrawString("Terima kasih telah mempercayakan", fontIsi, brush, marginKiri, yPos)
+        yPos += 20
+        e.Graphics.DrawString("kenyamanan hunian Anda kepada kami.", fontIsi, brush, marginKiri, yPos)
+
+        e.HasMorePages = False
     End Sub
 
     ' ---- Tombol Aksi: Logout ----
@@ -86,15 +134,13 @@ Public Class FormDashboardUser
         End If
     End Sub
 
-    ' ---- Handler MenuStrip (Diarahkan ke logika tombol) ----
+    ' ---- Handler MenuStrip ----
     Private Sub mnuPesan_Click(sender As Object, e As EventArgs) Handles mnuPesan.Click
         btnPesan_Click(sender, e)
     End Sub
-
     Private Sub mnuKelola_Click(sender As Object, e As EventArgs) Handles mnuKelola.Click
         btnKelolaP_Click(sender, e)
     End Sub
-
     Private Sub mnuLogout_Click(sender As Object, e As EventArgs) Handles mnuLogout.Click
         btnLogout_Click(sender, e)
     End Sub

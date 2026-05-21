@@ -102,11 +102,6 @@ Public Class FormPenghuni
         End If
     End Sub
 
-    ' ---- Tombol Refresh ----
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
-        TampilData()
-    End Sub
-
     ' ---- Tombol Tutup ----
     Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
         Me.Close()

@@ -111,11 +111,6 @@ Public Class FormKelolaP
         End If
     End Sub
 
-    ' ---- Refresh ----
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
-        TampilData()
-    End Sub
-
     ' ---- Tutup ----
     Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
         Me.Close()
